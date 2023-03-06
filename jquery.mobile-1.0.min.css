@@ -439,7 +439,7 @@ https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css → Purified CSS RE
 480 	- .ui-content .ui-listview-inset {margin:1em 0;}
 481 	- .ui-listview,.ui-li {list-style:none;padding:0;}
 482 	- .ui-li,.ui-li.ui-field-contain {display:block;margin:0;position:relative;overflow:visible;text-align:left;border-width:0;border-top-width:1px;}
-483 	- .ui-li .ui-btn-text a.ui-link-inherit {text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+483 	- .ui-li .ui-btn-text a.ui-link-inherit {text-overflow:ellipsis;overflow:visible;white-space:nowrap;}
 484 	- .ui-li-divider,.ui-li-static {padding:.5em 15px;font-size:14px;font-weight:bold;}
 485 	- .ui-li-divider {counter-reset:listnumbering;}
 486 	- ol.ui-listview .ui-link-inherit:before,ol.ui-listview .ui-li-static:before,.ui-li-dec {font-size:.8em;display:inline-block;padding-right:.3em;font-weight:normal;counter-increment:listnumbering;content:counter(listnumbering) ". ";}
@@ -454,8 +454,8 @@ https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css → Purified CSS RE
 495 	- .ui-li-has-arrow .ui-btn-inner a.ui-link-inherit,.ui-li-static.ui-li-has-arrow {padding-right:30px;}
 496 	- .ui-li-has-arrow.ui-li-has-count .ui-btn-inner a.ui-link-inherit,.ui-li-static.ui-li-has-arrow.ui-li-has-count {padding-right:75px;}
 497 	- .ui-li-has-count .ui-btn-text {padding-right:15px;}
-498 	- .ui-li-heading {font-size:16px;font-weight:bold;display:block;margin:.6em 0;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
-499 	- .ui-li-desc {font-size:12px;font-weight:normal;display:block;margin:-.5em 0 .6em;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+498 	- .ui-li-heading {font-size:16px;font-weight:bold;display:block;margin:.6em 0;text-overflow:ellipsis;overflow:visible;white-space:nowrap;}
+499 	- .ui-li-desc {font-size:12px;font-weight:normal;display:block;margin:-.5em 0 .6em;text-overflow:ellipsis;overflow:visible;white-space:nowrap;}
 500 	- .ui-li-thumb,.ui-listview .ui-li-icon {position:absolute;left:1px;top:0;max-height:80px;max-width:80px;}
 501 	- .ui-listview .ui-li-icon {max-height:40px;max-width:40px;left:10px;top:.9em;}
 502 	- .ui-li-thumb,.ui-listview .ui-li-icon,.ui-li-content {float:left;margin-right:10px;}
