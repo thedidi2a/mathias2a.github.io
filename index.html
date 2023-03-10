@@ -4,7 +4,14 @@
 	<title></title> 
 	
 	<meta name="viewport" content="width=device-width"> 
-
+<meta charset="utf-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#myTab a:last").tab("show"); // show last tab
+});
+</script>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
@@ -13,6 +20,7 @@
   word-break: break-all;
 }
 </style>
+
 </head> 
 
 <body> 
@@ -405,15 +413,27 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<h1 style="text-align: justify;"><strong>Candidose</strong></h1>
-<table table-layout= auto; border="1">
-<tbody>
-<tr>
-<td>
-<p>Histologie</p>
-</td>
-<td style="width: 70%;">
-<p>Nombreux aspects microscopiques.</p>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home" class="nav-link active" data-bs-toggle="tab">Histologie</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile" class="nav-link" data-bs-toggle="tab">Examens complémentaires</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages" class="nav-link" data-bs-toggle="tab">Clinique</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test" class="nav-link" data-bs-toggle="tab">Diagnostics différentiels</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test2" class="nav-link" data-bs-toggle="tab">Ressources</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <p>Nombreux aspects microscopiques.</p>
 <p>Les modifications de la couche corn&eacute;e incluent :</p>
 <p>- Pr&eacute;sence de neutrophiles</p>
 <p>- Orthok&eacute;ratose compacte</p>
@@ -422,25 +442,14 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 <p>Au niveau dermique, il peut &ecirc;tre not&eacute; un infiltrat inflammatoire diss&eacute;min&eacute; polymorphe ou tr&egrave;s l&eacute;ger avec involution des follicules pileux.</p>
 <p>Les dermatophytes sont identifi&eacute;s comme des filaments branch&eacute;s, sept&eacute;s, avec des spores.</p>
 <p>A noter : la pr&eacute;sence de filaments, m&ecirc;me dans une zone orthok&eacute;ratosique mince, &agrave; la portion la plus profonde de la couche corn&eacute;e est suffisante pour porter le diagnostic de dermatophytose.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Examens compl&eacute;mentaires</p>
-</td>
-<td style="width: 70%;">
-<p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration sp&eacute;ciale au PAS, Grocott.</em></span></span></p>
+        </div>
+        <div class="tab-pane fade" id="profile">
+         <p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration sp&eacute;ciale au PAS, Grocott.</em></span></span></p>
 <p><span class="term tooltipstered" data-term-id="370"><span><em><img src="http://www.histopathology-india.net/DermatophytePASstain.JPG" alt="http://www.histopathology-india.net/DermatophytePASstain.JPG" /></em></span><br /></span></p>
 <p><span class="term tooltipstered" data-term-id="370"><span><em></em></span></span></p>
-<p></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Clinique</p>
-</td>
-<td style="width: 70%;">
-<div class="obsahoddilu">
+        </div>
+        <div class="tab-pane fade" id="messages">
+            <div class="obsahoddilu">
 <div class="textoddilu">
 <p>Variable selon le pathog&egrave;ne :</p>
 <ul>
@@ -455,25 +464,18 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 </ul>
 </div>
 </div>
-</td>
-</tr>
-<tr>
-<td>
-<p>Diagnostics diff&eacute;rentiels</p>
-</td>
-<td style="width: 70%;">/</td>
-</tr>
-<tr>
-<td>
-<p>Ressources</p>
-</td>
-<td style="width: 70%;">
-<p>Pathology of Dermatophytosis - Dr Sampurna Roy MD [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: http://www.histopathology-india.net/DePhy.htm</p>
+        </div>
+		<div class="tab-pane fade" id="test">
+            <h4 class="mt-2">/</h4>
+         
+        </div>
+		<div class="tab-pane fade" id="test2">
+            <p>Pathology of Dermatophytosis - Dr Sampurna Roy MD [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: http://www.histopathology-india.net/DePhy.htm</p>
 <p>Sur Youtube :</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rd-ts0hyiOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> <iframe width="560" height="315" src="https://www.youtube.com/embed/3frVaJ4lHNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> <iframe width="560" height="315" src="https://www.youtube.com/embed/UnToS3-QsUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> 
-</tr>
-</tbody>
-</table>
+        </div>
+    </div>
+</div>
 </div><!-- /page -->
 
 
@@ -543,59 +545,53 @@ Annales de Dermatologie et Venerologie : https://doi.org/10.1016/S0151-9638(18)3
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<p style="text-align: justify;"></p>
-<table style="width: 100;" border="1">
-<tbody>
-<tr >
-<td >
-<p>Histologie</p>
-</td>
-<td style="width: 70%;">
-<p><span class="term tooltipstered" data-term-id="370">Peut passer inaper&ccedil;ue : p</span><span class="term tooltipstered" data-term-id="370">etits d&eacute;p&ocirc;ts de substance amylo&iuml;de dans les papilles dermiques, form&eacute;s par la d&eacute;g&eacute;n&eacute;rescence des k&eacute;ratinocytes basaux +-/ focalement visibles<i>. </i>Ces d&eacute;pots, nombreux, peuvent &ecirc;tre tant&ocirc;t confluents, tant&ocirc;t dispers&eacute;s. On&nbsp; note &eacute;galement une hyperpigmentation de la lame basale. Il peut aussi y avoir une fibrose du derme papillaire.&nbsp;</span></p>
-<div class="imageModal__image"><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f3.jpg" width="395" height="314" /></div>
-<p>La coloration au rouge congo permet de mettre en &eacute;vidence les d&eacute;pots, qui sont &eacute;galement bir&eacute;fringents jaune/verts en lumi&egrave;re polaris&eacute;e</p>
-</td>
-</tr>
-<tr >
-<td >
-<p>Examens compl&eacute;mentaires</p>
-</td>
-<td style="width: 70%; ">
-<p><span class="term tooltipstered" data-term-id="370">La PanCK peut &ecirc;tre utilis&eacute;e pour identifier l'origine &eacute;pidermique des d&eacute;pots amylo&iuml;des. Un marquage positif par les chaines l&eacute;g&egrave;res kappa/lambda sugg&egrave;re une amylose AM et doit faire consid&eacute;rer une amylose syst&eacute;mique.<br /></span></p>
-<p><span class="term tooltipstered" data-term-id="370"><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f4.jpg" width="392" height="202" /></span></p>
-</td>
-</tr>
-<tr>
-<td >
-<p>Clinique</p>
-</td>
-<td style="width: 70%;">
-<p>Macules prurigineuses et pigment&eacute;es si&eacute;geant le plus souvent sur le dos.</p>
-<p><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f2.jpg" width="380" height="249" /></p>
-</td>
-</tr>
-<tr>
-<td >
-<p>Diagnostics diff&eacute;rentiels</p>
-</td>
-<td style="width: 70%; ">
-<p>Les d&eacute;pots pouvant passer inaper&ccedil;us, devant une dermatose "invisible", il faut y penser et les rechercher.</p>
-<p>Le milium collo&iuml;de est une pathologie d&eacute;crite la premi&egrave;re fois par Wagner en 1866Plusieurs appellations lui sont connues telles que le pseudomilium collo&iuml;de, l&rsquo;infiltration collo&iuml;de, le collo&iuml;dome miliaire, le hyalome et la d&eacute;g&eacute;n&eacute;rescence collo&iuml;dale nodulaire.</p>
-<p>ref : Okhremchuk I, Abed S, Nguyen AT, Brandone N, Morand JJ. Milium collo&iuml;de&nbsp;: une observation associ&eacute;e &agrave; une trichinose. Annales de Pathologie. 1 avr 2016;36(2):130‑3.&nbsp;</p>
-</td>
-</tr>
-<tr >
-<td >
-<p>Ressources</p>
-</td>
-<td style="width: 70%; ">
-<p>images issues de l'article : Venugopal. Primary localized cutaneous amyloidosis &ndash; A clinicopathological study [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: <a href="https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;">https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;</a></p>
-<p>Sur Youtube :</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/9060ux10Gho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> <br /><br />Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=01181%2B&amp;link=1&amp;cx=323&amp;cy=235&amp;n=23&amp;m=0&amp;q=65&amp;f=0&amp;r=0&amp;language=en&quot;" target="_blank" rel="noopener">ici</a>.</p>
-</td>
-</tr>
-</tbody>
-</table>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home1" class="nav-link active" data-bs-toggle="tab">Histologie</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile1" class="nav-link" data-bs-toggle="tab">Examens complémentaires</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages1" class="nav-link" data-bs-toggle="tab">Clinique</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test1" class="nav-link" data-bs-toggle="tab">Diagnostics différentiels</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test21" class="nav-link" data-bs-toggle="tab">Ressources</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home1">
+            <p><p><span class="term tooltipstered" data-term-id="370">Peut passer inaper&ccedil;ue : p</span><span class="term tooltipstered" data-term-id="370">etits d&eacute;p&ocirc;ts de substance amylo&iuml;de dans les papilles dermiques, form&eacute;s par la d&eacute;g&eacute;n&eacute;rescence des k&eacute;ratinocytes basaux +-/ focalement visibles<i>. </i>Ces d&eacute;pots, nombreux, peuvent &ecirc;tre tant&ocirc;t confluents, tant&ocirc;t dispers&eacute;s. On&nbsp; note &eacute;galement une hyperpigmentation de la lame basale. Il peut aussi y avoir une fibrose du derme papillaire.&nbsp;</span></p>
+			<div class="imageModal__image"><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f3.jpg" width="395" height="314" /></div>
+			p>La coloration au rouge congo permet de mettre en &eacute;vidence les d&eacute;pots, qui sont &eacute;galement bir&eacute;fringents jaune/verts en lumi&egrave;re polaris&eacute;e</p></p>
+        </div>
+        <div class="tab-pane fade" id="profile1">
+            <p><p><span class="term tooltipstered" data-term-id="370">La PanCK peut &ecirc;tre utilis&eacute;e pour identifier l'origine &eacute;pidermique des d&eacute;pots amylo&iuml;des. Un marquage positif par les chaines l&eacute;g&egrave;res kappa/lambda sugg&egrave;re une amylose AM et doit faire consid&eacute;rer une amylose syst&eacute;mique.<br /></span></p>
+			<p><span class="term tooltipstered" data-term-id="370"><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f4.jpg" width="392" height="202" /></span></p></p>
+        </div>
+        <div class="tab-pane fade" id="messages1">
+            <p><p>Macules prurigineuses et pigment&eacute;es si&eacute;geant le plus souvent sur le dos.</p>
+			<p><img src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f2.jpg" width="380" height="249" /></p></p>
+        </div>
+		<div class="tab-pane fade" id="test1">
+			<p><p>Les d&eacute;pots pouvant passer inaper&ccedil;us, devant une dermatose "invisible", il faut y penser et les rechercher.</p>
+			<p>Le milium collo&iuml;de est une pathologie d&eacute;crite la premi&egrave;re fois par Wagner en 1866Plusieurs appellations lui sont connues telles que le pseudomilium collo&iuml;de, l&rsquo;infiltration collo&iuml;de, le collo&iuml;dome miliaire, le hyalome et la d&eacute;g&eacute;n&eacute;rescence collo&iuml;dale nodulaire.</p>
+			<p>ref : Okhremchuk I, Abed S, Nguyen AT, Brandone N, Morand JJ. Milium collo&iuml;de&nbsp;: une observation associ&eacute;e &agrave; une trichinose. Annales de Pathologie. 1 avr 2016;36(2):130‑3.&nbsp;</p></p>
+        </div>
+		<div class="tab-pane fade" id="test21">
+			<p><p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=01181%2B&amp;link=1&amp;cx=323&amp;cy=235&amp;n=23&amp;m=0&amp;q=65&amp;f=0&amp;r=0&amp;language=en&quot;" target="_blank" rel="noopener">ici</a>.
+			<br/><br/>
+			images issues de l'article : Venugopal. Primary localized cutaneous amyloidosis &ndash; A clinicopathological study [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: <a href="https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;">https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;</a></p>
+			<p>Sur Youtube :</p>
+			<p><iframe width="560" height="315" src="https://www.youtube.com/embed/9060ux10Gho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> </p></p>
+        </div>
+    </div>
+</div>
+
 </div><!-- /page -->
 
 
@@ -625,37 +621,40 @@ Annales de Dermatologie et Venerologie : https://doi.org/10.1016/S0151-9638(18)3
 </ul>
 </div><!-- /content -->
 <h1 style="text-align: justify;"><strong>Dermatite herp&eacute;tiforme<br /></strong></h1>
-<table table-layout= auto; border="1">
-<tbody>
-<tr>
-<td>
-<p>Histologie</p>
-</td>
-<td style="width: 70%;">
-<p>les IgA sont form&eacute;es dans le gr&ecirc;le contre les transglutaminases de la peau. Dans la peau, elles agissent probablement par chimiotactisme des neutrophiles, et avec m&eacute;diation de complexe immuns. Pr&eacute;disposition chez les sujets HLA DQ2 ou DQ8.</p>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home-1" class="nav-link active" data-bs-toggle="tab">Histologie</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile-1" class="nav-link" data-bs-toggle="tab">Examens complémentaires</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages-1" class="nav-link" data-bs-toggle="tab">Clinique</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test-1" class="nav-link" data-bs-toggle="tab">Diagnostics différentiels</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test2-1" class="nav-link" data-bs-toggle="tab">Ressources</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home-1">
+            <p><p>les IgA sont form&eacute;es dans le gr&ecirc;le contre les transglutaminases de la peau. Dans la peau, elles agissent probablement par chimiotactisme des neutrophiles, et avec m&eacute;diation de complexe immuns. Pr&eacute;disposition chez les sujets HLA DQ2 ou DQ8.</p>
 <ul>
 <li id="yui_3_17_2_1_1678314131224_177">L&eacute;sion pr&eacute;coce : collection de polynucl&eacute;aires neutrophiles et quelques &eacute;osinophiles dans les papilles dermiques (micro-abc&egrave;s papillaires); clivage sous-&eacute;pidermique et formation de petites cavit&eacute;s de d&eacute;collement&nbsp; entre l'&eacute;piderme et le derme, donnant un aspect multiloculaire</li>
 <li>L&eacute;sions plus &acirc;g&eacute;es : d&eacute;collement sous-&eacute;pidermique nettement form&eacute;, donnant un aspect de bulle uniloculaire, avec fibrine, neutrophiles, &eacute;osinophiles et rares k&eacute;ratinocytes n&eacute;cros&eacute;s</li>
 </ul>
 <p><img src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental06.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental06.jpg" class="shrinkToFit" width="443" height="348" /></p>
-<p><img src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" class="shrinkToFit" width="443" height="348" /></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Examens compl&eacute;mentaires</p>
-</td>
-<td style="width: 70%;">
-<p><span class="term tooltipstered" data-term-id="370"><span><em>Immunofluorescence : d&eacute;p&ocirc;ts granuleux d&rsquo;IgA +/- C3 au sommet des papilles dermiques de la peau p&eacute;ri-l&eacute;sionnelle<br /></em></span></span></p>
-<p><span class="term tooltipstered" data-term-id="370"><img src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" class="shrinkToFit" width="461" height="347" /></span></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Clinique</p>
-</td>
-<td style="width: 70%;">
-<ul id="yui_3_17_2_1_1678314131224_194">
+<p><img src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" class="shrinkToFit" width="443" height="348" /></p></p>
+        </div>
+        <div class="tab-pane fade" id="profile-1">
+            <p><p><span class="term tooltipstered" data-term-id="370"><span><em>Immunofluorescence : d&eacute;p&ocirc;ts granuleux d&rsquo;IgA +/- C3 au sommet des papilles dermiques de la peau p&eacute;ri-l&eacute;sionnelle<br /></em></span></span></p>
+<p><span class="term tooltipstered" data-term-id="370"><img src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" class="shrinkToFit" width="461" height="347" /></span></p></p>
+        </div>
+        <div class="tab-pane fade" id="messages-1">
+            <p><ul id="yui_3_17_2_1_1678314131224_194">
 <li><span style="background-color: #ffffff;">Dermatose chronique, r&eacute;cidivante, caract&eacute;ris&eacute;e par des papules et v&eacute;sicules</span><span style="background-color: #ffffff;"> tendues tr&egrave;s prurigineuses.</span></li>
 <li><span style="background-color: #ffffff;">Distribution de type herp&eacute;tiforme (en bouquet) surtout sur les</span> surfaces d'extension des coudes, genoux, en r&eacute;gion sacr&eacute;e et sur le cuir chevelu</li>
 <li>D&eacute;tection d'anticorps anti-transglutaminase &agrave; la phase active.</li>
@@ -663,31 +662,21 @@ Annales de Dermatologie et Venerologie : https://doi.org/10.1016/S0151-9638(18)3
 </ul>
 <p><img loading="lazy" class="fig-image" alt="An external file that holds a picture, illustration, etc.
 Object name is fimmu-10-01290-g0002.jpg" title="An external file that holds a picture, illustration, etc.
-Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6579917/bin/fimmu-10-01290-g0002.jpg" width="330" height="198" /></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Diagnostics diff&eacute;rentiels</p>
-</td>
-<td style="width: 70%; ">
-<p>Dermatose lin&eacute;aire &agrave; IgA ;</p>
+Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6579917/bin/fimmu-10-01290-g0002.jpg" width="330" height="198" /></p></p>
+        </div>
+    <div class="tab-pane fade" id="test-1">
+      <p><p>Dermatose lin&eacute;aire &agrave; IgA ;</p>
 <p>Pemphigus herp&eacute;tiforme ;</p>
 <p>Pemphigo&iuml;de bulleuse ;</p>
 <p>Lupus bulleux ;</p>
-<p>Epidermolyse bulleuse acquise.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Ressources</p>
-</td>
-<td style="width: 70%;">
-<p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=00111+" target="_blank" rel="noopener">ici</a></p>
-<p>Dermatitis herpetiformis [Internet]. [cit&eacute; 9 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumordermatitisherpetiformis.html</p>
-</tr>
-</tbody>
-</table>
+<p>Epidermolyse bulleuse acquise.</p></p>
+        </div>
+    <div class="tab-pane fade" id="test2-1">
+      <p><p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=00111+" target="_blank" rel="noopener">ici</a></p>
+<p>Dermatitis herpetiformis [Internet]. [cit&eacute; 9 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumordermatitisherpetiformis.html</p></p>
+        </div>
+    </div>
+</div>
 </div><!-- /page -->
 
 
@@ -1704,35 +1693,36 @@ Differential diagnosis
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-	
-<table style="width: 100%;" border="1">
-<tbody>
-<tr>
-<td>
-<p>Histologie</p>
-</td>
-<td style="width: 70%; ">
-<p><span class="term tooltipstered" data-term-id="370">Filaments myc&eacute;liens dans la partie superficielle de la couche corn&eacute;e, PAS positifs. Modifications &agrave; l'HE inconstantes : parak&eacute;ratose focale, neutrophiles en exocytose dans la couche corn&eacute;e.</span></p>
+<div class="m-4">
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="nav-item">
+            <a href="#home3" class="nav-link active" data-bs-toggle="tab">Histologie</a>
+        </li>
+        <li class="nav-item">
+            <a href="#profile3" class="nav-link" data-bs-toggle="tab">Examens complémentaires</a>
+        </li>
+        <li class="nav-item">
+            <a href="#messages3" class="nav-link" data-bs-toggle="tab">Clinique</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test3" class="nav-link" data-bs-toggle="tab">Diagnostics différentiels</a>
+        </li>
+		<li class="nav-item">
+            <a href="#test23" class="nav-link" data-bs-toggle="tab">Ressources</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home3">
+            <p><p><span class="term tooltipstered" data-term-id="370">Filaments myc&eacute;liens dans la partie superficielle de la couche corn&eacute;e, PAS positifs. Modifications &agrave; l'HE inconstantes : parak&eacute;ratose focale, neutrophiles en exocytose dans la couche corn&eacute;e.</span></p>
 <div class="imageModal__image"><img src="https://www.pathologyoutlines.com/wick/breast/candidiasisskinmicro.jpg" width="308" height="256" /></div>
 <div class="imageModal__image"><img src="https://www.pathologyoutlines.com/wick/breast/candidiasisskinpasstain.jpg" alt="https://www.pathologyoutlines.com/wick/breast/candidiasisskinpasstain.jpg" width="307" height="264" /></div>
-<p></p>
-</td>
-</tr>
-<tr>
-<td >
-<p>Examens compl&eacute;mentaires</p>
-</td>
-<td style="width: 70%;">
-<p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration utiles : </em><strong>Grocott-Gomori</strong> (<em>GMS</em>)</span> et <strong>PAS</strong>.<br /></span></p>
-<p></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>Clinique</p>
-</td>
-<td style="width: 70%; ">
-<div class="obsahoddilu">
+<p></p></p>
+        </div>
+        <div class="tab-pane fade" id="profile3">
+            <p><p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration utiles : </em><strong>Grocott-Gomori</strong> (<em>GMS</em>)</span> et <strong>PAS</strong>.<br /></span></p></p>
+        </div>
+        <div class="tab-pane fade" id="messages3">
+            <p><div class="obsahoddilu">
 <div class="textoddilu">
 <ul>
 <li>Localisation: intertrigo (r&eacute;gion inguinale, genitale, sous la poitrine, plis cutan&eacute;s de la personne ob&egrave;se), cavit&eacute; orale, ongles.</li>
@@ -1742,15 +1732,10 @@ Differential diagnosis
 </ul>
 <p><img src="https://www.pathologyoutlines.com/wick/breast/candidiasisclinical.jpg" alt="https://www.pathologyoutlines.com/wick/breast/candidiasisclinical.jpg" width="257" height="187" /></p>
 </div>
-</div>
-</td>
-</tr>
-<tr>
-<td>
-<p>Diagnostics diff&eacute;rentiels</p>
-</td>
-<td style="width: 70%;">
-<ul>
+</div></p>
+        </div>
+    <div class="tab-pane fade" id="test3">
+      <p><ul>
 <li>Vaginose bacterienne</li>
 <li>Dermite de contact +/- impetig&eacute;nis&eacute;e</li>
 <li>Intertrigo</li>
@@ -1760,22 +1745,17 @@ Differential diagnosis
 <li>dermatite de radiation</li>
 <li>Dermatite seborrheique</li>
 <li>Trichomonas</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td >
-<p>Ressources</p>
-</td>
-<td style="width: 70%;">
-<p>
+</ul></p>
+        </div>
+    <div class="tab-pane fade" id="test23">
+      <p><p>
 Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=01216+" target="_blank" rel="noopener">ici</a>.
 <p>Sur Youtube :</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/r_jYeBjCeXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> <br /><br/><a href="https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;">Fungi-Candida [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumorfungicandida.html</a></p></p>
-</td>
-</tr>
-</tbody>
-</table>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/r_jYeBjCeXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe> <br /><br/><a href="https://amhsjournal.org/article.asp?issn=2321-4848;year=2019;volume=7;issue=1;spage=38;epage=41;aulast=Venugopal;">Fungi-Candida [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumorfungicandida.html</a></p></p></p>
+        </div>
+    </div>
+</div>
+
 </div><!-- /page -->
 
 
