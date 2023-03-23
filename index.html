@@ -13,26 +13,26 @@
  <!-- Script pour activer les onglets -->
  
     document.addEventListener("DOMContentLoaded", function() {
-      const onglets = document.querySelectorAll(".onglets li a");
+  const onglets = document.querySelectorAll(".onglets li a");
 
-      onglets.forEach((onglet) => {
-        onglet.addEventListener("click", function (event) {
-          event.preventDefault();
+  onglets.forEach((onglet) => {
+    onglet.addEventListener("click", function (event) {
+      event.preventDefault();
 
-          const ongletActif = document.querySelector(".onglets li.active");
-          ongletActif.classList.remove("active");
+      const ongletActif = document.querySelector(".onglets li.active");
+      ongletActif.classList.remove("active");
 
-          const contenuActif = document.querySelector(".tab-content.active");
-          contenuActif.classList.remove("active");
+      const contenuActif = document.querySelector(".tab-content.active");
+      contenuActif.classList.remove("active");
 
-          const idCible = onglet.getAttribute("href");
-          const nouvelOngletActif = document.querySelector(idCible);
-          nouvelOngletActif.classList.add("active");
+      const idCible = onglet.getAttribute("href");
+      const nouvelOngletActif = document.querySelector(idCible);
+      nouvelOngletActif.classList.add("active");
 
-          onglet.parentNode.classList.add("active");
-        });
-      });
+      onglet.parentNode.classList.add("active");
     });
+  });
+});
   
 </script>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
