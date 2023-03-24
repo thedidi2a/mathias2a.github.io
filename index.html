@@ -13,26 +13,26 @@
  <!-- Script pour activer les onglets -->
  
     document.addEventListener("DOMContentLoaded", function() {
-      const onglets = document.querySelectorAll(".onglets li a");
+  const onglets = document.querySelectorAll(".onglets li a");
 
-      onglets.forEach((onglet) => {
-        onglet.addEventListener("click", function (event) {
-          event.preventDefault();
+  onglets.forEach((onglet) => {
+    onglet.addEventListener("click", function (event) {
+      event.preventDefault();
 
-          const ongletActif = document.querySelector(".onglets li.active");
-          ongletActif.classList.remove("active");
+      const ongletActif = document.querySelector(".onglets li.active");
+      ongletActif.classList.remove("active");
 
-          const contenuActif = document.querySelector(".tabcontent.active");
-          contenuActif.classList.remove("active");
+      const contenuActif = document.querySelector(".tab-content.active");
+      contenuActif.classList.remove("active");
 
-          const idCible = onglet.getAttribute("href");
-          const nouvelOngletActif = document.querySelector(idCible);
-          nouvelOngletActif.classList.add("active");
+      const idCible = onglet.getAttribute("href");
+      const nouvelOngletActif = document.querySelector(idCible);
+      nouvelOngletActif.classList.add("active");
 
-          onglet.parentNode.classList.add("active");
-        });
-      });
+      onglet.parentNode.classList.add("active");
     });
+  });
+});
   
 </script>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
@@ -83,7 +83,7 @@
     }
     
     /* Styles pour le contenu des onglets */
-    .tabcontent {
+    .tab-content {
       padding: 1rem;
       border: 1px solid #ddd;
       border-top: none;
@@ -91,7 +91,7 @@
       display: none;
     }
     
-    .tabcontent.active {
+    .tab-content.active {
       display: block;
     }
 
@@ -409,15 +409,16 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
   
   <p>Les mastocytoses se d&eacute;finissent par un exc&egrave;s de mastocytes intra-tissulaires . Il s&rsquo;agit d&rsquo;une maladie rare mais non exceptionnelle, dont l&rsquo;incidence annuelle est estim&eacute;e &agrave; 1/150 000. Elle peut survenir &agrave; tout &acirc;ge, sans pr&eacute;disposition de sexe malgr&eacute; une discr&egrave;te pr&eacute;dominance masculine dans l&rsquo;enfance et f&eacute;minine &agrave; l&rsquo;&acirc;ge adulte</p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab176')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab177')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab178')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab179')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab180')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-176">Histologie</a></li>
+    <li><a href="#onglet-177">Examens complémentaires</a></li>
+    <li><a href="#onglet-178">Clinique</a></li>
+    <li><a href="#onglet-179">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-180">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab176">
+  <div class="tab-content active" id="onglet-176">
     <div class="block_body">
 <p>4 formes :</p>
 <ul>
@@ -439,7 +440,7 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 
 
   
-  <div class="tabcontent" id="tab177">
+  <div class="tab-content" id="onglet-177">
 <div class="block_body">
   
 <ul>
@@ -450,7 +451,7 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
   </div>
  </div>
 
-    <div class="tabcontent" id="tab178">
+    <div class="tab-content" id="onglet-178">
       
 <p>Parmi les tableaux cliniques les plus souvent rencontr&eacute;s, il est possible de distinguer les <strong>formes cutan&eacute;es pures</strong> de la maladie, les plus fr&eacute;quentes, <strong>les formes syst&eacute;miques</strong> et les <strong>manifestations r&eacute;actionnelles li&eacute;es &agrave; la d&eacute;granulation</strong> des mastocytes cutan&eacute;s ou visc&eacute;raux.</p>
 <p>Ici, seules les formes cutan&eacute;es sont d&eacute;crites :</p>
@@ -464,7 +465,7 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
       
   </div>
   
-    <div class="tabcontent" id="tab179">
+    <div class="tab-content" id="onglet-179">
       
 
 <p>- Dermatoses chroniques ,</p>
@@ -475,7 +476,7 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 
   </div>
   
-    <div class="tabcontent" id="tab180">
+    <div class="tab-content" id="onglet-180">
  
    
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/zfuDpaAC9zM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe loading="lazy"  width="560" height="315" src="https://www.youtube.com/embed/2vPVsJD9AsA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/wyJ6uCqBYeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -529,14 +530,15 @@ nous vous conseillons de vous y connecter via le lien suivant pour acceder aux l
 <p>Cliniquement, ces termes impliquent des l&eacute;sions &eacute;ryth&eacute;mateuses annulaires.</p>
 <p>Les pathologistes utilisent souvent ces m&ecirc;mes termes (en particulier l'&eacute;ryth&egrave;me gyrate) de mani&egrave;re g&eacute;n&eacute;rique pour d&eacute;crire une l&eacute;sion inflammatoire avec un infiltrat lymphocytaire p&eacute;ri-vasculaire "en manchette".</p>
 <p>Ils ne doivent pas &ecirc;tre interpr&eacute;t&eacute; comme impliquant une maladie sp&eacute;cifique. Il est probable que la litt&eacute;rature ant&eacute;rieure ait souvent class&eacute; diff&eacute;rentes maladies sous ces appellations. Par cons&eacute;quent, pour &eacute;viter toute confusion, il est recommand&eacute; de ne pas utiliser ces termes pour faire r&eacute;f&eacute;rence &agrave; des maladies sp&eacute;cifiques.</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab111')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab112')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab113')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab114')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab115')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab111">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-111">Histologie</a></li>
+    <li><a href="#onglet-112">Examens complémentaires</a></li>
+    <li><a href="#onglet-113">Clinique</a></li>
+    <li><a href="#onglet-114">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-115">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-111">
     <div class="block_body">
 
 <p><strong>Erytheme annulaire centrifuge</strong></p>
@@ -570,7 +572,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </div>
 
 
-  <div class="tabcontent" id="tab112">
+  <div class="tab-content" id="onglet-112">
 <div class="block_body">
 <p><strong>Erytheme annulaire centrifuge</strong></p>
 <div class="flex flex-grow flex-col gap-3">
@@ -586,7 +588,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
   </div>
  </div>
 
-    <div class="tabcontent" id="tab113">
+    <div class="tab-content" id="onglet-113">
       
 <p><strong>Erytheme annulaire centrifuge</strong></p>
 <p>L'&eacute;ryth&egrave;me annulaire centrifuge a une incidence de 1 pour 100 000 et peut &ecirc;tre associ&eacute; &agrave; certains facteurs sous-jacents, notamment :</p>
@@ -617,7 +619,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
       
   </div>
   
-    <div class="tabcontent" id="tab114">
+    <div class="tab-content" id="onglet-114">
       
 <p><strong>Erytheme annulaire centrifuge</strong></p>
 <p>&Eacute;tant donn&eacute; que les caract&eacute;ristiques histologiques de l'&eacute;ryth&egrave;me annulaire centrifuge sont asp&eacute;cifiques, il est essentiel de corr&eacute;ler les r&eacute;sultats de la biopsie et les observations cliniques.</p>
@@ -633,7 +635,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 
   </div>
   
-    <div class="tabcontent" id="tab115">
+    <div class="tab-content" id="onglet-115">
  
    
        <p>Calonje E, Brenn T, Lazar AJ, MacKee PH, Billings SD, éditeurs. McKee’s pathology of the skin: with clinical correlations. Fifth edition. Philadelphia, PA: Elsevier; 2020. </p>
@@ -662,14 +664,15 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 <p>&mdash; des l&eacute;sions cutan&eacute;es uniquement &eacute;ryth&eacute;mateuses avec une &eacute;ventuelle autre composante minime (v&eacute;siculeuse, purpurique, squameuse, etc.) ;</p>
 <p>&mdash; un cours aigu.</p><br/><br/></p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab76')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab77')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab78')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab79')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab80')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab76">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-76">Histologie</a></li>
+    <li><a href="#onglet-77">Examens complémentaires</a></li>
+    <li><a href="#onglet-78">Clinique</a></li>
+    <li><a href="#onglet-79">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-80">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-76">
     <div class="block_body">
 
          <p>Peu sp&eacute;cifique : </p>
@@ -684,24 +687,24 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </div>
   </div>
 
-  <div class="tabcontent" id="tab77">
+  <div class="tab-content" id="onglet-77">
 <p>/</p>
   </div>
  
-    <div class="tabcontent" id="tab78">
+    <div class="tab-content" id="onglet-78">
  
       <p>L&rsquo;&eacute;ryth&egrave;me de base peut &ecirc;tre d&eacute;crit comme morbilliforme, scarlatiniforme ou rub&eacute;oliforme. L&rsquo;&eacute;ryth&egrave;me <em>morbilliforme</em> est compos&eacute; de macules &eacute;ryth&eacute;mateuses, facilement confluentes, s&eacute;par&eacute;es par des intervalles de peau saine non prurigineuses. L&rsquo;&eacute;ryth&egrave;me <em>scarlatiniforme</em> se pr&eacute;sente avec des macules tr&egrave;s petites, parfois infiltr&eacute;es, confluant rapidement en vastes nappes color&eacute;es en rouge vif ou fonc&eacute;, avec de rares intervalles de peau saine, surtout &agrave; la hauteur des plis&nbsp;; il est rarement prurigineux. L&rsquo;&eacute;ryth&egrave;me <em>rub&eacute;oliforme</em> est form&eacute; de macules rose p&acirc;le plus ou moins &eacute;tendues, tr&egrave;s petites, planes, s&eacute;par&eacute;es par des intervalles de peau saine&nbsp;; il est non prurigineux.</p>
       
   </div>
   
-    <div class="tabcontent" id="tab79">
+    <div class="tab-content" id="onglet-79">
 <p>Les diagnostics diff&eacute;rentiels de la <strong>rougeole</strong> sont les toxidermies (aspect plus polymorphe, &eacute;volution plus rapide et pr&eacute;sence d&rsquo;un prurit), les autres exanth&egrave;mes viraux (la rub&eacute;ole accompagn&eacute;e d&rsquo;ad&eacute;nopathies cervicales caract&eacute;ristiques, l&rsquo;exanth&egrave;me subit, le m&eacute;gal&eacute;ryth&egrave;me infectieux, la mononucl&eacute;ose infectieuse, le syndrome de Gianotti-Crosti, les coxsackie virus&nbsp;4 et 5, le VIH, etc.), la scarlatine, la rickettsiose (spotted fever accompagn&eacute;e de conjonctivite mais sans coryza), l&rsquo;&eacute;ruption du typhus exanth&eacute;matique, de la trypanosomiase et de la dengue. En pr&eacute;sence de l&eacute;sions palmo-plantaires, il faut exclure la syphilis secondaire.</p>
 <p>Le diagnostic diff&eacute;rentiel des<strong> &eacute;ruptions virales scarlatiniformes</strong> se fait avec la scarlatine (fi&egrave;vre &eacute;lev&eacute;e avec pharyngite, angine et langue frambois&eacute;e, d&eacute;but de l&rsquo;exanth&egrave;me au niveau des grands plis, l&eacute;sions ponctiformes, &eacute;pargnement de la zone p&eacute;ri-orale), le syndrome de Kawasaki (conjonctives inject&eacute;es, fi&egrave;vre &eacute;lev&eacute;e ne r&eacute;pondant pas aux antibiotiques, l&egrave;vres rouges fonc&eacute;es, exanth&egrave;me d&eacute;butant dans la zone du p&eacute;rin&eacute;e), la scarlatine staphylococcique, les staphylococcal scalded skin syndromes (l&eacute;sions d&eacute;butant dans les zones de friction m&eacute;canique, formation de bulles), le syndrome du choc toxique streptococcique (fi&egrave;vre, hypotension, pr&eacute;sence d&rsquo;un foyer cutan&eacute; profond douloureux), le syndrome papulo-purpurique en gants et chaussettes (papular-purpuric gloves and socks syndrome) et l&rsquo;APEC (l&eacute;sions localis&eacute;es), les toxidermies et, moins fr&eacute;quemment, la streptococc&eacute;mie, la m&eacute;ningococc&eacute;mie, la dipht&eacute;rie.</p>
 <p><strong>L&rsquo;exanth&egrave;me ros&eacute;oliforme</strong> est fr&eacute;quemment d&rsquo;origine virale et m&eacute;dicamenteuse mais doit &ecirc;tre distingu&eacute; de la syphilis secondaire par la s&eacute;rologie.</p>
       
   </div>
   
-    <div class="tabcontent" id="tab80">
+    <div class="tab-content" id="onglet-80">
  
     <p><a href="https://www.therapeutique-dermatologique.org/spip.php?article1109&var_recherche=Exanth%C3%A8mes%20viraux#paragraphe-3">Exanthèmes viraux - Thérapeutique Dermatologique -ebook</a></p>
       <br/><br/>
@@ -724,14 +727,15 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </ul>
 </div><!-- /content -->
   <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2> Toxidermies </h2> </p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab66')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab67')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab68')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab69')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab70')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab66">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-66">Histologie</a></li>
+    <li><a href="#onglet-67">Examens complémentaires</a></li>
+    <li><a href="#onglet-68">Clinique</a></li>
+    <li><a href="#onglet-69">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-70">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-66">
     <div class="block_body">
 
           <p>On parle de toxidermie pour toute &eacute;ruption cutan&eacute;e d'origine m&eacute;dicamenteuse. Les toxidermies sont fr&eacute;quentes, et sont vari&eacute;es, tant sur le plan histologique que clinique.</p>
@@ -863,11 +867,11 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </div>
   </div>
 
-  <div class="tabcontent" id="tab67">
+  <div class="tab-content" id="onglet-67">
 /
   </div>
  
-    <div class="tabcontent" id="tab68">
+    <div class="tab-content" id="onglet-68">
    <div class="block_body">
     <table data-spacer="" id="tableI" style="display: table;">
 <tbody>
@@ -1021,7 +1025,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
      
       </div></div>
   
-    <div class="tabcontent" id="tab69">
+    <div class="tab-content" id="onglet-69">
 <p><h3>Diagnostics diff&eacute;rentiels</h3>
 <p>Exanth&egrave;me maculopapuleux :</p>
 <ul>
@@ -1046,7 +1050,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
       
   </div>
   
-    <div class="tabcontent" id="tab70">
+    <div class="tab-content" id="onglet-70">
  
     <p> SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. 
       <br/><br/>Ernst M, Giubellino A. Histopathologic Features of Maculopapular Drug Eruption. Dermatopathology. juin 2022;9(2):111‑21. <br/><br/>
@@ -1074,14 +1078,15 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab11')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab12')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab13')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab14')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab15')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab11">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-11">Histologie</a></li>
+    <li><a href="#onglet-12">Examens complémentaires</a></li>
+    <li><a href="#onglet-13">Clinique</a></li>
+    <li><a href="#onglet-14">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-15">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-11">
     <p><h3><strong>HISTOLOGIE</strong></h3>
 			<p>Nombreux aspects microscopiques.</p>
 <p>Les modifications de la couche corn&eacute;e incluent :</p>
@@ -1094,7 +1099,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 <p>A noter : la pr&eacute;sence de filaments, m&ecirc;me dans une zone orthok&eacute;ratosique mince, &agrave; la portion la plus profonde de la couche corn&eacute;e est suffisante pour porter le diagnostic de dermatophytose.</p></p>
   </div>
 
-  <div class="tabcontent" id="tab12">
+  <div class="tab-content" id="onglet-12">
     <p><h3><strong>EXAMENS COMPLENENTAIRES</strong></h3>
 		 <p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration sp&eacute;ciale au PAS, Grocott.</em></span></span></p>
 <p><span class="term tooltipstered" data-term-id="370"><span><em><img loading="lazy" src="http://www.histopathology-india.net/DermatophytePASstain.JPG" alt="http://www.histopathology-india.net/DermatophytePASstain.JPG" /></em></span><br /></span></p>
@@ -1102,7 +1107,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
         </p>
   </div>
  
-    <div class="tabcontent" id="tab13">
+    <div class="tab-content" id="onglet-13">
     <p><h3><strong>CLINIQUE</strong></h3>
 			<div class="obsahoddilu">
 <div class="textoddilu">
@@ -1121,12 +1126,12 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </div></p>
   </div>
   
-    <div class="tabcontent" id="tab14">
+    <div class="tab-content" id="onglet-14">
     <p>  <h3><strong>DIAGNOSTICS DIFFERENTIELS</strong></h3>
 			<h4 class="mt-2">/</h4></p>
   </div>
   
-    <div class="tabcontent" id="tab15">
+    <div class="tab-content" id="onglet-15">
     <p> <h3><strong>RESSOURCES</strong></h3>
 			<p>Pathology of Dermatophytosis - Dr Sampurna Roy MD [Internet]. [cit&eacute; 8 mars 2023]. Disponible sur: http://www.histopathology-india.net/DePhy.htm</p>
 <p>Sur Youtube :</p>
@@ -1150,14 +1155,15 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
  <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2> Erythrasma </h2> </p>
   Les corynébactéries sont des bacilles à Gram positif, filamenteux, corynéformes. Elles sont saprophytes des plis mais peuvent, dans certaines conditions (humidité, diabète, obésité), proliférer et devenir pathogènes. Leur prolifération cutanée est classiquement responsable de trois aspects cliniques différents, qui seraient plutôt d’origine polymicrobienne : l’érythrasma (Corynebacterium minutissimum), la kératolyse ponctuée (C. keratoliticum) et la trichobactériose, désignée également par le terme de trichomycose (C. tenuis).<br/><br/>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab71')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab72')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab73')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab74')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab75')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab71">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-71">Histologie</a></li>
+    <li><a href="#onglet-72">Examens complémentaires</a></li>
+    <li><a href="#onglet-73">Clinique</a></li>
+    <li><a href="#onglet-74">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-75">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-71">
     <div class="block_body">
 
          <p>Peut facilement passer inaper&ccedil;u car la r&eacute;ponse inflammatoire est g&eacute;n&eacute;ralement minimale.</p>
@@ -1167,16 +1173,16 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </div>
   </div>
 
-  <div class="tabcontent" id="tab72">
+  <div class="tab-content" id="onglet-72">
 <p>La coloration de Gram de l'&eacute;rythrasma montre des tiges et des filaments d&eacute;licats Gram-positif dans la couche corn&eacute;e. Pas d'utilit&eacute; en pratique courante (visible ++ &agrave; l'HE)</p>
   </div>
  
-    <div class="tabcontent" id="tab73">
+    <div class="tab-content" id="onglet-73">
  <p>L&rsquo;aspect est celui d&rsquo;un intertrigo de couleur rouge orang&eacute;, avec parfois un renforcement v&eacute;siculeux p&eacute;riph&eacute;rique, pouvant toucher tous les plis. Les atteintes p&eacute;ri-anales et interdigito-plantaires sont souvent m&eacute;connues. Il existe aussi des formes diss&eacute;min&eacute;es dans les climats chauds et humides. La fluorescence &laquo;&nbsp;corail&nbsp;&raquo; &agrave; l&rsquo;examen par la lumi&egrave;re de Wood est caract&eacute;ristique. Les diagnostics diff&eacute;rentiels sont le psoriasis et les mycoses (dermatophytoses et candidoses) qui peuvent &eacute;galement &ecirc;tre associ&eacute;es &agrave; l&rsquo;<mark class="spip_surligne">&eacute;rythrasma</mark>. Il n&rsquo;y a pas de retentissement fonctionnel, hormis la possibilit&eacute; d&rsquo;un prurit, souvent discret. De rares cas de bact&eacute;ri&eacute;mies, abc&egrave;s, endocardites &agrave; <em>C.</em> <em>minutissimum</em> ont &eacute;t&eacute; rapport&eacute;s.</p>
 <p><img loading="lazy" src="https://www.dermatologyadvisor.com/wp-content/uploads/sites/20/2019/03/ch979.fig1_.jpg" alt="" /></p>
   </div>
   
-    <div class="tabcontent" id="tab74">
+    <div class="tab-content" id="onglet-74">
 <ul>
 <li>Le pityriasis versicolor (parfois appel&eacute; tinea versicolor) - les levures de Malassezia (anciennement connues sous le nom de Pityrosporum) colonisent la couche corn&eacute;e et ne suscitent pas non plus beaucoup de r&eacute;ponse &eacute;pidermique. Les formes de levure sont plus grandes que les coryn&eacute;bact&eacute;ries et ne se colorent pas avec la coloration de Gram.</li>
 <li>Peau normale - Les organismes saproophytes.</li>
@@ -1185,7 +1191,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
       
   </div>
   
-    <div class="tabcontent" id="tab75">
+    <div class="tab-content" id="onglet-75">
  
 <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/7PJHCJRBjj8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -1211,15 +1217,16 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 </h2> </p>
   
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab141')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab142')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab143')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab144')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab145')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-141">Histologie</a></li>
+    <li><a href="#onglet-142">Examens complémentaires</a></li>
+    <li><a href="#onglet-143">Clinique</a></li>
+    <li><a href="#onglet-144">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-145">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab141">
+  <div class="tab-content active" id="onglet-141">
     <div class="block_body">
 
 <p>L'organisme responsable de la k&eacute;ratolyse ponctu&eacute;e est typiquement Corynebacterium. D'autres organismes ont &eacute;galement &eacute;t&eacute; rapport&eacute;s, notamment Dermatophilus congolensis et Micrococcus sedentarius.</p>
@@ -1231,7 +1238,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 
 
   
-  <div class="tabcontent" id="tab142">
+  <div class="tab-content" id="onglet-142">
 <div class="block_body">
   
 <p>Des colorations sp&eacute;ciales avec une coloration de Gram ou une coloration de Steiner vont intens&eacute;ment colorer l'organisme responsable.</p>
@@ -1240,14 +1247,14 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
   </div>
  </div>
 
-    <div class="tabcontent" id="tab143">
+    <div class="tab-content" id="onglet-143">
       
 <p>La k&eacute;ratolyse ponctu&eacute;e est un trouble de la peau caract&eacute;ris&eacute; par des d&eacute;pressions crat&eacute;riformes qui affectent principalement les zones de pression de la plante des pieds et, occasionnellement, les paumes des mains sous forme de collerettes de squames. Les manifestations de la k&eacute;ratolyse ponctu&eacute;e sont dues &agrave; une infection bact&eacute;rienne cutan&eacute;e superficielle. Les l&eacute;sions primaires de la k&eacute;ratolyse ponctu&eacute;e sont des &eacute;rosions dans la couche corn&eacute;e d'une taille allant de 0,5 &agrave; 7 mm, avec parfois une confluence, des &eacute;rosions irr&eacute;guli&egrave;res ou des sillons.</p>
 <p><img loading="lazy"  src="https://img.medscapestatic.com/pi/meds/ckb/38/27538tn.jpg" alt="A large plaque-like lesion of Pitted keratolysis o" class="pborder" width="203" height="152" /><img loading="lazy" src="https://img.medscapestatic.com/pi/meds/ckb/40/27540tn.jpg" alt="Pitted keratolysis with hyperkeratosis on the heel" class="pborder" width="201" height="268" /></p>
       
   </div>
   
-    <div class="tabcontent" id="tab144">
+    <div class="tab-content" id="onglet-144">
       
 
       <p>Pityriasis versicolor ( tinea versicolor) &ndash; Malassezia (Pityrosporum) (ne r&eacute;agit pas &agrave; la coloration de Gram)</p>
@@ -1257,7 +1264,7 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 
   </div>
   
-    <div class="tabcontent" id="tab145">
+    <div class="tab-content" id="onglet-145">
  
    
       <p>J Fromm L. Pitted Keratolysis: Background, Pathophysiology, Epidemiology. 12 oct 2022; Disponible sur: <a href="https://emedicine.medscape.com/article/1053078-overview">https://emedicine.medscape.com/article/1053078-overview&nbsp;&nbsp;&nbsp;</a></p>
@@ -1282,14 +1289,15 @@ Object name is IJD-55-120-g003.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articl
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>L'Hyprpigmentation post-inflammatoire</h2> </p>
   <p>L'hyperpigmentation post-inflammatoire est une hypermélanose acquise et réactive.<br/>
 Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermatoses sous-jacente, traumatismes, radiations UV, iatrogénie...).</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab131')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab132')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab133')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab134')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab135')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab131">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-131">Histologie</a></li>
+    <li><a href="#onglet-132">Examens complémentaires</a></li>
+    <li><a href="#onglet-133">Clinique</a></li>
+    <li><a href="#onglet-134">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-135">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-131">
     <div class="block_body">
 
 <p>On consid&egrave;re 2 groupes d'Hyperpigmentation Post Inflammatoire :</p>
@@ -1301,20 +1309,20 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 </div>
 
 
-  <div class="tabcontent" id="tab132">
+  <div class="tab-content" id="onglet-132">
 <div class="block_body">
 <p>/</p> 
   </div>
  </div>
 
-    <div class="tabcontent" id="tab133">
+    <div class="tab-content" id="onglet-133">
       
 <p>Les taches hyperpigment&eacute;es post-inflammatoires se trouvent &agrave; l'emplacement de la l&eacute;sion d'origine apr&egrave;s gu&eacute;rison. Les l&eacute;sions varient en couleur, allant du brun clair au noir. Les taches peuvent devenir plus fonc&eacute;es si elles sont expos&eacute;es &agrave; la lumi&egrave;re du soleil.</p>
 <p><img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/597317ad29687fd9f2a25a61/1517329303239-21OBJN7G68W63EO8KWW8/042014_post-acne-hyperpigmentation.jpg" alt="https://images.squarespace-cdn.com/content/v1/597317ad29687fd9f2a25a61/1517329303239-21OBJN7G68W63EO8KWW8/042014_post-acne-hyperpigmentation.jpg" width="340" height="273" /></p>
       
   </div>
   
-    <div class="tabcontent" id="tab134">
+    <div class="tab-content" id="onglet-134">
       
 
       <p>/</p>
@@ -1322,7 +1330,7 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 
   </div>
   
-    <div class="tabcontent" id="tab135">
+    <div class="tab-content" id="onglet-135">
  
    
       <p>Park JY, Park JH, Kim SJ, Kwon JE, Kang HY, Lee ES, et al. Two histopathological patterns of postinflammatory hyperpigmentation: epidermal and dermal. J Cutan Pathol. févr 2017;44(2):118‑24.  </p>
@@ -1345,40 +1353,41 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 </ul>
 </div>
 <!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab1')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab2')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab3')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab4')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab5')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab1">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-1">Histologie</a></li>
+    <li><a href="#onglet-2">Examens complémentaires</a></li>
+    <li><a href="#onglet-3">Clinique</a></li>
+    <li><a href="#onglet-4">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-5">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-1">
    		 <p><h3><strong>HISTOLOGIE</strong></h3>
             <p><p><span class="term tooltipstered" data-term-id="370">Peut passer 	inaper&ccedil;ue : p</span><span class="term tooltipstered" data-term-id="370">etits d&eacute;p&ocirc;ts de substance amylo&iuml;de dans les papilles dermiques, form&eacute;s par la d&eacute;g&eacute;n&eacute;rescence des k&eacute;ratinocytes basaux +-/ focalement visibles<i>. </i>Ces d&eacute;pots, nombreux, peuvent &ecirc;tre tant&ocirc;t confluents, tant&ocirc;t dispers&eacute;s. On&nbsp; note &eacute;galement une hyperpigmentation de la lame basale. Il peut aussi y avoir une fibrose du derme papillaire.&nbsp;</span></p>
 			<div class="imageModal__image"><img loading="lazy" src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f3.jpg" width="395" height="314" /></div>
 			</p></p>
   </div>
 
-  <div class="tabcontent" id="tab2">
+  <div class="tab-content" id="onglet-2">
     <p><h3><strong>EXAMENS COMPLENENTAIRES</strong></h3>
 			<p>La coloration au rouge congo permet de mettre en &eacute;vidence les d&eacute;pots, qui sont &eacute;galement bir&eacute;fringents jaune/verts en lumi&egrave;re polaris&eacute;e</p><br/><p><span class="term tooltipstered" data-term-id="370">La PanCK peut &ecirc;tre utilis&eacute;e pour identifier l'origine &eacute;pidermique des d&eacute;pots amylo&iuml;des. Un marquage positif par les chaines l&eacute;g&egrave;res kappa/lambda sugg&egrave;re une amylose AM et doit faire consid&eacute;rer une amylose syst&eacute;mique.<br /></span></p>
 			<p><span class="term tooltipstered" data-term-id="370"><img loading="lazy" src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f4.jpg" width="392" height="202" /></span></p></p>
   </div>
  
-    <div class="tabcontent" id="tab3">
+    <div class="tab-content" id="onglet-3">
     <p> <h3><strong>CLINIQUE</strong></h3>
 			<p><p>Macules prurigineuses et pigment&eacute;es si&eacute;geant le plus souvent sur le dos.</p>
 			<p><img loading="lazy" src="https://amhsjournal.org/articles/2019/7/1/images/ArchMedHealthSci_2019_7_1_38_260000_f2.jpg" width="380" height="249" /></p></p></p>
   </div>
   
-    <div class="tabcontent" id="tab4">
+    <div class="tab-content" id="onglet-4">
     <p><h3><strong>DIAGNOSTICS DIFFERENTIELS</strong></h3>
 			<p><p>Les d&eacute;pots pouvant passer inaper&ccedil;us, devant une dermatose "invisible", il faut y penser et les rechercher.</p>
 			<p>Le milium collo&iuml;de est une pathologie d&eacute;crite la premi&egrave;re fois par Wagner en 1866Plusieurs appellations lui sont connues telles que le pseudomilium collo&iuml;de, l&rsquo;infiltration collo&iuml;de, le collo&iuml;dome miliaire, le hyalome et la d&eacute;g&eacute;n&eacute;rescence collo&iuml;dale nodulaire.</p>
 			<p>ref : Okhremchuk I, Abed S, Nguyen AT, Brandone N, Morand JJ. Milium collo&iuml;de&nbsp;: une observation associ&eacute;e &agrave; une trichinose. Annales de Pathologie. 1 avr 2016;36(2):130‑3.&nbsp;</p></p></p>
   </div>
   
-    <div class="tabcontent" id="tab5">
+    <div class="tab-content" id="onglet-5">
     <p>	<h3><strong>RESSOURCES</strong></h3>
 			<p><p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=01181%2B&amp;link=1&amp;cx=323&amp;cy=235&amp;n=23&amp;m=0&amp;q=65&amp;f=0&amp;r=0&amp;language=en&quot;" target="_blank" rel="noopener">ici</a>.
 			<br/><br/>
@@ -1405,15 +1414,16 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
   <p>Maladie inflammatoire chronique d’étiologie inconnue.</p>
 
 <p>On distingue 3 formes principales, le lupus érythémateux chronique (discoïde) limité à la peau, le lupus subaigu avec des lésions cliniques assez particulières et parfois une atteinte systémique et le lupus érythémateux aigu, affection systémique.</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab151')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab152')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab153')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab154')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab155')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-151">Histologie</a></li>
+    <li><a href="#onglet-152">Examens complémentaires</a></li>
+    <li><a href="#onglet-153">Clinique</a></li>
+    <li><a href="#onglet-154">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-155">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent " id="tab151">
+  <div class="tab-content active" id="onglet-151">
     <div class="block_body">
 
 
@@ -1457,7 +1467,7 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 
 
   
-  <div class="tabcontent" id="tab152">
+  <div class="tab-content" id="onglet-152">
 <div class="block_body">
   
   <p>- Bleu Alcian pour déceler une éventuelle mucinose</p> 
@@ -1468,7 +1478,7 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
   </div>
  </div>
 
-    <div class="tabcontent" id="tab153">
+    <div class="tab-content" id="onglet-153">
       
 <h2 id="yui_3_17_2_1_1679262776402_179">1 Lupus disco&iuml;de ou chronique</h2>
 <p>le d&eacute;but est progressif, parfois d&eacute;clench&eacute; par une exposition solaire, chez un adulte souvent de sexe f&eacute;minin.</p>
@@ -1490,7 +1500,7 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
       
   </div>
   
-    <div class="tabcontent" id="tab154">
+    <div class="tab-content" id="onglet-154">
       
 
 <h2 id="yui_3_17_2_1_1679262776402_179">1 Lupus disco&iuml;de ou chronique</h2>
@@ -1513,7 +1523,7 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 
   </div>
   
-    <div class="tabcontent" id="tab155">
+    <div class="tab-content" id="onglet-155">
  
    
  <p> SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. </p>
@@ -1548,14 +1558,15 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 </ul>
 </div><!-- /content -->
 <h1 style="text-align: justify;"><strong>Dermatite herp&eacute;tiforme<br /></strong></h1>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab16')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab17')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab18')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab19')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab20')">Ressources</button>
-</div>
-  <div class="tabcontent " id="tab16">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-16">Histologie</a></li>
+    <li><a href="#onglet-17">Examens complémentaires</a></li>
+    <li><a href="#onglet-18">Clinique</a></li>
+    <li><a href="#onglet-19">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-20">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-16">
     <p><h3><strong>HISTOLOGIE</strong></h3>
 			<p><p>les IgA sont form&eacute;es dans le gr&ecirc;le contre les transglutaminases de la peau. Dans la peau, elles agissent probablement par chimiotactisme des neutrophiles, et avec m&eacute;diation de complexe immuns. Pr&eacute;disposition chez les sujets HLA DQ2 ou DQ8.</p>
 			<ul>
@@ -1566,13 +1577,13 @@ Elle est une séquelle de nombreux processus inflammatoires antérieurs (dermato
 			<p><img loading="lazy" src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisOccidental05.jpg" class="shrinkToFit" width="443" height="348" /></p></p></p>
   </div>
 
-  <div class="tabcontent" id="tab17">
+  <div class="tab-content" id="onglet-17">
     <p><h3><strong>EXAMENS COMPLENENTAIRES</strong></h3>
 			<p><p><span class="term tooltipstered" data-term-id="370"><span><em>Immunofluorescence : d&eacute;p&ocirc;ts granuleux d&rsquo;IgA +/- C3 au sommet des papilles dermiques de la peau p&eacute;ri-l&eacute;sionnelle<br /></em></span></span></p>
 			<p><span class="term tooltipstered" data-term-id="370"><img loading="lazy" src="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" alt="https://www.pathologyoutlines.com/imgau/skinnontumordermatitisherpetiformisKim01.jpg" class="shrinkToFit" width="461" height="347" /></span></p></p></p>
   </div>
  
-    <div class="tabcontent" id="tab18">
+    <div class="tab-content" id="onglet-18">
     <p><h3><strong>CLINIQUE</strong></h3>
 			<p><ul id="yui_3_17_2_1_1678314131224_194">
 				<li><span style="background-color: #ffffff;">Dermatose chronique, r&eacute;cidivante, caract&eacute;ris&eacute;e par des papules et v&eacute;sicules</span><span style="background-color: #ffffff;"> tendues tr&egrave;s prurigineuses.</span></li>
@@ -1585,7 +1596,7 @@ Object name is fimmu-10-01290-g0002.jpg" title="An external file that holds a pi
 Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6579917/bin/fimmu-10-01290-g0002.jpg" width="330" height="198" /></p></p></p>
   </div>
   
-    <div class="tabcontent" id="tab19">
+    <div class="tab-content" id="onglet-19">
     <p><h3><strong>DIAGNOSTICS DIFFERENTIELS</strong></h3>
 	  <p><p>Dermatose lin&eacute;aire &agrave; IgA ;</p>
 		<p>Pemphigus herp&eacute;tiforme ;</p>
@@ -1594,7 +1605,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 		<p>Epidermolyse bulleuse acquise.</p></p></p>
   </div>
   
-    <div class="tabcontent" id="tab20">
+    <div class="tab-content" id="onglet-20">
     <p><h3><strong>RESSOURCES</strong></h3>	
 	  <p><p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=00111+" target="_blank" rel="noopener">ici</a></p>
 <p>Dermatitis herpetiformis [Internet]. [cit&eacute; 9 mars 2023]. Disponible sur: https://www.pathologyoutlines.com/topic/skinnontumordermatitisherpetiformis.html</p></p></p>
@@ -1613,31 +1624,32 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab21')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab22')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab23')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab24')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab25')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab21">
+ <ul class="onglets">
+    <li class="active"><a href="#onglet-21">Histologie</a></li>
+    <li><a href="#onglet-22">Examens complémentaires</a></li>
+    <li><a href="#onglet-23">Clinique</a></li>
+    <li><a href="#onglet-24">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-25">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-21">
     <p><h3><strong>HISTOLOGIE</strong></h3>
             <p>Maladie rare, dont l’incidence annuelle est d'environ 0.22 à 2.3 cas/million d’habitants. <br/>
 			Il existe deux pics de fréquence : adulte et de l'enfance.<br/>
 			Pathogénèse : étiologie inconnue (parfois d'origine médicamenteuse) ; antigènes cibles (LAD1, BP180, BPAg2) hétérogènes ; auto-anticorps IgA circulant chez 70% des enfants et 20% des adultes. <br/><br/>
 			Histologiquement, formation d'une bulle sous-épidermique proche de celle de la dermatite herpétiforme établie, avec infiltrat de neutrophiles dans le derme superficiel.<br/>
 			Les neutrophiles s'alignent le long de la membrane basale, avec parfois accentuation dans les papilles dermiques. Quelques éosinophiles peuvent être présents ainsi qu'un infiltrat lymphocytaire périvasculaire. </p>
-			<br/><div class="tabcontent"><img loading="lazy" src="https://escholarship.org/content/qt676552r9/3.jpg" /></p></p>
+			<br/><div class="tab-content"><img loading="lazy" src="https://escholarship.org/content/qt676552r9/3.jpg" /></p></p>
   </div></div>
 
-  <div class="tabcontent" id="tab22">
+  <div class="tab-content" id="onglet-22">
     <p><h3><strong>EXAMENS COMPLENENTAIRES</strong></h3>
           	<p>
 			L'immunofluorescenre retrouve des dépôts linéaires homogènes d’IgA le long de la membrane basale, en peau péri-lésionnelle. <br/>
 			<p><img loading="lazy" src="https://www.medscape.com/content/2004/00/47/01/470164/art-dn470164.fig4b.jpg" /></p></p></p>
   </div>
  
-    <div class="tabcontent" id="tab23">
+    <div class="tab-content" id="onglet-23">
     <p><h3><strong>CLINIQUE</strong></h3>
           	<p><ul id="yui_3_17_2_1_1678496148449_195">
 			<li><span style="background-color: #ffffff;">Chez l'adulte, l&eacute;sions bulleuses tendues, parfois en bouquet, sur le tronc et les membres, sur fond peu inflammatoire<br /></span></li>
@@ -1647,7 +1659,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 			</p></p>
   </div>
   
-    <div class="tabcontent" id="tab24">
+    <div class="tab-content" id="onglet-24">
     <p>	<h3><strong>DIAGNOSTICS DIFFERENTIELS</strong></h3>
       		<p><ul>
 			<li>dermatite herp&eacute;tiforme</li>
@@ -1657,7 +1669,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 			<p>L'IF permet de diff&eacute;rencier les cas difficiles.</p><br/></p></p>
   </div>
   
-    <div class="tabcontent" id="tab25">
+    <div class="tab-content" id="onglet-25">
     <p><h3><strong>RESSOURCES</strong></h3>
       		<p><p>lien vers slide virtuelle : Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=02688%2B&link=1&cx=450&cy=401&n=32&m=3&q=65&f=0&r=0&language=en" target="_blank" rel="noopener">ici</a>.<br/>
 			Lame virtuelle immunofluorescence : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=02693%2B&link=1&cx=323&cy=255&n=23&m=0&q=65&f=0&r=0&language=en" target="_blank" rel="noopener">ici</a>.<br/><br/>
@@ -1709,14 +1721,15 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab26')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab27')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab28')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab29')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab30')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab26">
+<ul class="onglets">
+    <li class="active"><a href="#onglet-26">Histologie</a></li>
+    <li><a href="#onglet-27">Examens complémentaires</a></li>
+    <li><a href="#onglet-28">Clinique</a></li>
+    <li><a href="#onglet-29">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-30">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-26">
     <p>à évoquer devant : 
       <ul>
 <li>Derme superficiel pâle</li>
@@ -1735,20 +1748,20 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
     </p>
   </div>
 
-  <div class="tabcontent" id="tab27">
+  <div class="tab-content" id="onglet-27">
     <p>une coloration de <strong>Perls</strong> peut &ecirc;tre r&eacute;alis&eacute;e pour mettre en &eacute;vidence les d&eacute;pots feriques</p>
   </div>
  
-    <div class="tabcontent" id="tab28">
+    <div class="tab-content" id="onglet-28">
     <p><p><b>La dermite de stase</b> est relativement commune en dermatopathologie chez le sujet &acirc;g&eacute;. Elle est secondaire &agrave; une stade veineuse, et se caract&eacute;rise par une localisation aux membres inf&eacute;rieurs. Il s'agit de plaques et papules l&eacute;g&egrave;rement brun&acirc;tres avec oed&egrave;mes prenant le godet.</p>
 <p><img loading="lazy" src="https://www.dermis.net/bilder/CD001/550px/img0040.jpg" alt="https://www.dermis.net/bilder/CD001/550px/img0040.jpg" width="140" height="219" /></p></p>
   </div>
   
-    <div class="tabcontent" id="tab29">
+    <div class="tab-content" id="onglet-29">
     <p>Dermatites psoriasiformes et autres pathologies inflammatoires</p>
   </div>
   
-    <div class="tabcontent" id="tab30">
+    <div class="tab-content" id="onglet-30">
     <p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=14213%2B&link=1&cx=320&cy=208&n=32&m=7&q=65&f=2&r=0&language=en;" target="_blank" rel="noopener">ici</a>.</p>
 	<br/>
 	<br/>
@@ -1799,14 +1812,15 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Pemphigoïde de la grossesse / Herpès gestationnel</h2> </p>
   <p>Doit son nom à l'aspect herpétiforme des bulles, n'a aucun lien avec HSV.</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab126')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab127')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab128')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab129')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab130')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab126">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-126">Histologie</a></li>
+    <li><a href="#onglet-127">Examens complémentaires</a></li>
+    <li><a href="#onglet-128">Clinique</a></li>
+    <li><a href="#onglet-129">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-130">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-126">
     <div class="block_body">
 
 <ul>
@@ -1820,7 +1834,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div>
 
 
-  <div class="tabcontent" id="tab127">
+  <div class="tab-content" id="onglet-127">
 <div class="block_body">
 <p>IF :</p>
 <ul>
@@ -1833,7 +1847,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
   </div>
  </div>
 
-    <div class="tabcontent" id="tab128">
+    <div class="tab-content" id="onglet-128">
       
 <ul>
 <li>Extr&egrave;mement rare, g&eacute;n&eacute;ralement au 3e trimestre de grossesse ou en post-partum</li>
@@ -1846,7 +1860,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
       
   </div>
   
-    <div class="tabcontent" id="tab129">
+    <div class="tab-content" id="onglet-129">
       
 
 <ul>
@@ -1857,7 +1871,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 
   </div>
   
-    <div class="tabcontent" id="tab130">
+    <div class="tab-content" id="onglet-130">
  
    
       <p>SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. </p>
@@ -1910,14 +1924,15 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2> Eruption induite à la minocycline </h2> </p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab81')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab82')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab83')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab84')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab85')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab81">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-81">Histologie</a></li>
+    <li><a href="#onglet-82">Examens complémentaires</a></li>
+    <li><a href="#onglet-83">Clinique</a></li>
+    <li><a href="#onglet-84">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-85">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-81">
     <div class="block_body">
 <p>Aspécifique : se rapporter aux items concernés.</p>
         <div class="whole_rhythm" id="antibiotics-10-00757-t002">
@@ -1957,24 +1972,24 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div>
   </div>
 
-  <div class="tabcontent" id="tab82">
+  <div class="tab-content" id="onglet-82">
 <p><p>Aspécifique : se rapporter aux items concernés.</p>
 </p>
   </div>
  
-    <div class="tabcontent" id="tab83">
+    <div class="tab-content" id="onglet-83">
  
       <p>Aspécifique : se rapporter aux items concernés.</p>
 
       
   </div>
   
-    <div class="tabcontent" id="tab84">
+    <div class="tab-content" id="onglet-84">
 <p>Aspécifique : se rapporter aux items concernés.</p>
 
   </div>
   
-    <div class="tabcontent" id="tab85">
+    <div class="tab-content" id="onglet-85">
  
    
       <p>Martins AM, Marto JM, Johnson JL, Graber EM. A Review of Systemic Minocycline Side Effects and Topical Minocycline as a Safer Alternative for Treating Acne and Rosacea. Antibiotics (Basel). 22 juin 2021;10(7):757. 
@@ -2083,14 +2098,15 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2> Erythème polymorphe </h2> </p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab86')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab87')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab88')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab89')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab90')">Ressources</button>
-</div>
-  <div class="tabcontent " id="tab86">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-86">Histologie</a></li>
+    <li><a href="#onglet-87">Examens complémentaires</a></li>
+    <li><a href="#onglet-88">Clinique</a></li>
+    <li><a href="#onglet-89">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-90">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-86">
     <div class="block_body">
 
 <p><strong>L&rsquo;&eacute;ryth&egrave;me polymorphe</strong> est un syndrome cutan&eacute;o-muqueux aigu d&eacute;fini par ses seules caract&eacute;ristiques cliniques. L&rsquo;absence de sp&eacute;cificit&eacute; histologique et de marqueurs biologiques contribuent &agrave; une nosologie confuse.</p>
@@ -2114,7 +2130,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div>
 
 
-  <div class="tabcontent" id="tab87">
+  <div class="tab-content" id="onglet-87">
 <div class="block_body">
 <ul>
 <li> IF : C3 et IgM au niveau de la membrane basale et des vaisseaux</li>
@@ -2122,13 +2138,13 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div>    
   </div>
  
-    <div class="tabcontent" id="tab88">
+    <div class="tab-content" id="onglet-88">
  
 <p>Groupe de pathologie assimil&eacute;es depuis les ann&eacute;es 1950, on distingue, d&rsquo;une part, l<strong>&rsquo;&eacute;ryth&egrave;me polymorphe</strong> mineur et majeur avec ses cocardes typiques &agrave; distribution acrale, de cause principalement infectieuse et, d&rsquo;autre part, le syndrome de <strong>Stevens-Johnson</strong> et le syndrome de <strong>Lyell</strong> de causes m&eacute;dicamenteuses, caract&eacute;ris&eacute;s par des macules &eacute;ryth&eacute;mateuses ne pr&eacute;sentant jamais la s&eacute;miologie d&rsquo;une cocarde typique, confluant en nappes plus ou moins vastes et qui ont une distribution &agrave; pr&eacute;dominance &laquo;&nbsp;centrale&nbsp;&raquo; sur le thorax et les racines des membres.</p>
       <img loading="lazy" src="https://www.pathologyoutlines.com/wick/breast/erythemamultiformeclinical.jpg" alt="" />
   </div>
   
-    <div class="tabcontent" id="tab89">
+    <div class="tab-content" id="onglet-89">
 <ul>
 <li>GVH : ant&eacute;c&eacute;dents cliniques ; les premiers changements sont la vacuolisation et la n&eacute;crose de la couche basale, la spongiose, l'apoptose, l'acantholyse, l'inflammation chronique de la couche sup&eacute;rieure du derme avec un infiltrat lymphocytaire p&eacute;ri-vasculaire et des lymphocytes intra-&eacute;pidermiques.</li>
 <li>R&eacute;action m&eacute;dicamenteuse : &eacute;osinophiles et &eacute;paississement marqu&eacute; de la paroi vasculaire.</li>
@@ -2138,7 +2154,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 
   </div>
   
-    <div class="tabcontent" id="tab90">
+    <div class="tab-content" id="onglet-90">
  
    
       <p>Pathology outlines : <a href="https://www.pathologyoutlines.com/topic/skinnontumorerythemamultiforme.html">ici</a>
@@ -2173,15 +2189,16 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 <p class="Textecourant"><em>Certains auteurs distinguent une troisi&egrave;me forme suraigu&euml; d&eacute;nomm&eacute;e forme f&eacute;brile ulc&eacute;ro-n&eacute;crotique de Mucha-Habermann (FFUNMH).</em></p>
 <p class="Textecourant">Les investigations actuelles tendent &agrave; pr&eacute;ciser cette entit&eacute; et &agrave; r&eacute;pondre &agrave; la question de savoir si le parapsoriasis en gouttes et la papulose lymphomato&iuml;de repr&eacute;sentent ou non deux formes d&rsquo;une m&ecirc;me entit&eacute;. Cette pr&eacute;cision est d&rsquo;importance lorsque l&rsquo;on sait que la papulose lymphomato&iuml;de peut &ecirc;tre associ&eacute;e &agrave; des lymphomes. Dans la litt&eacute;rature anglo-saxonne, le terme de pityriasis lich&eacute;no&iuml;des est pr&eacute;f&eacute;r&eacute; &agrave; celui de parapsoriasis en gouttes pour &eacute;viter la confusion avec le parapsoriasis en plaques, consid&eacute;r&eacute; comme l&rsquo;&eacute;tape initiale du mycosis fongo&iuml;de.</p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab181')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab182')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab183')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab184')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab185')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-181">Histologie</a></li>
+    <li><a href="#onglet-182">Examens complémentaires</a></li>
+    <li><a href="#onglet-183">Clinique</a></li>
+    <li><a href="#onglet-184">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-185">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab181">
+  <div class="tab-content active" id="onglet-181">
     <div class="block_body">
       <p>Les signes histologiques des l&eacute;sions du parapsoriasis en gouttes aigu sont une <strong>parak&eacute;ratose</strong> <strong>focale</strong> avec des <strong>neutrophiles</strong> <strong>dans les squames</strong>, une <strong>spongiose</strong> importante, de nombreux <strong>k&eacute;ratinocytes n&eacute;crotiques</strong> ainsi que de nombreux <strong>lymphocytes et des globules rouges extravas&eacute;s</strong> <span style="text-decoration: underline;"><strong>dans l&rsquo;&eacute;piderme</strong></span>. Un infiltrat superficiel lich&eacute;no&iuml;de peut &ecirc;tre not&eacute; dans le derme papillaire, associ&eacute; &agrave; un &oelig;d&egrave;me et &agrave; l&rsquo;extravasation des globules rouges. L&rsquo;infiltrat, compos&eacute; de lymphocytes, d&rsquo;histiocytes, de neutrophiles et d&rsquo;&eacute;osinophiles, peut &eacute;galement &ecirc;tre profond et p&eacute;rivasculaire. Ult&eacute;rieurement, la <strong>vacuolisation</strong> peut aboutir &agrave; des <strong>v&eacute;sicules</strong> sous- et intra-&eacute;pidermiques, pouvant entra&icirc;ner une n&eacute;crose de tout l&rsquo;&eacute;piderme. Lorsque le parapsoriasis en gouttes &eacute;volue de fa&ccedil;on moins agressive, l&rsquo;infiltrat est confin&eacute; au niveau des vaisseaux des plexus superficiels, sans &oelig;d&egrave;me du derme papillaire et avec une extravasation discr&egrave;te des globules rouges. La vacuolisation et la ballonnisation ne sont pas accompagn&eacute;es de v&eacute;siculation, et les zones de parak&eacute;ratose ne montrent pas de neutrophiles. Cependant, il est probable que les parapsoriasis en gouttes aigus et chroniques repr&eacute;sentent diff&eacute;rentes expressions d&rsquo;un m&ecirc;me processus.</p>
 <h3>Forme aigue (PLEVA) :</h3>
@@ -2214,7 +2231,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 
 
   
-  <div class="tabcontent" id="tab182">
+  <div class="tab-content" id="onglet-182">
 <div class="block_body">
   
   <p>/</p>
@@ -2222,7 +2239,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
   </div>
  </div>
 
-    <div class="tabcontent" id="tab183">
+    <div class="tab-content" id="onglet-183">
       
 <p>Plus fr&eacute;quent chez les hommes jeunes.</p>
 <p>On distingue classiquement des formes aigues et des formes chroniques moins inflammatoires, les 2 pouvant &ecirc;tre associ&eacute;es.</p>
@@ -2237,7 +2254,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
       
   </div>
   
-    <div class="tabcontent" id="tab184">
+    <div class="tab-content" id="onglet-184">
       
 
 <p>Diagnostics diff&eacute;rentiels clinique :</p>
@@ -2256,7 +2273,7 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 
   </div>
   
-    <div class="tabcontent" id="tab185">
+    <div class="tab-content" id="onglet-185">
  
     <p> SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. </p>
 <p><a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=06295%2B&amp;link=1&amp;cx=376&amp;cy=375&amp;n=32&amp;m=5&amp;q=65&amp;f=2&amp;r=0&amp;language=en" target="_blank" rel="noopener">Lame virtuelle PLEVA</a></p>
@@ -2280,14 +2297,15 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Maladie du greffon contre l’hôte</h2> </p>
  
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab116')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab117')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab118')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab119')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab120')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab116">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-116">Histologie</a></li>
+    <li><a href="#onglet-117">Examens complémentaires</a></li>
+    <li><a href="#onglet-118">Clinique</a></li>
+    <li><a href="#onglet-119">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-120">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-116">
     <div class="block_body">
 
 <p><strong>Phase aigu&euml;　:</strong></p>
@@ -2311,13 +2329,13 @@ Object name is fimmu-10-01290-g0002.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/a
 </div>
 
 
-  <div class="tabcontent" id="tab117">
+  <div class="tab-content" id="onglet-117">
 <div class="block_body">
 <p>/</p> 
   </div>
  </div>
 
-    <div class="tabcontent" id="tab118">
+    <div class="tab-content" id="onglet-118">
       
 <p>&nbsp;Les signes cliniques cutan&eacute;s de<strong> GVH aigue</strong> sont un exanth&egrave;me maculo-papuleux touchant en priorit&eacute; les faces lat&eacute;rales du cou, le d&eacute;collet&eacute;, les paumes et les plantes mais pouvant s&rsquo;&eacute;tendre &agrave; l&rsquo;ensemble du t&eacute;gument, difficile &agrave; distinguer des autres causes d&rsquo;exanth&egrave;me (r&eacute;activation virale, toxidermie maculo-papuleuse).</p>
 <p>Au maximum de son intensit&eacute;, la GVHa cutan&eacute;e r&eacute;alise des bulles et des d&eacute;collements bulleux simulant un syndrome de Lyell. Quatre stades d&rsquo;&eacute;volutivit&eacute; sont d&eacute;crits : grade I : &lt; 25% surface corporelle, grade II : 25 &agrave; 50%, grade III : &gt; 50%, grade IV : bulles et d&eacute;collements.</p>
@@ -2337,7 +2355,7 @@ Object name is medi-96-e7333-g001.jpg" title="An external file that holds a pict
 Object name is medi-96-e7333-g001.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5500070/bin/medi-96-e7333-g001.jpg" width="400" height="389" /></p>
   </div>
   
-    <div class="tabcontent" id="tab119">
+    <div class="tab-content" id="onglet-119">
       
 <ul>
 <li>Toxidermie</li>
@@ -2347,7 +2365,7 @@ Object name is medi-96-e7333-g001.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/art
 
   </div>
   
-    <div class="tabcontent" id="tab120">
+    <div class="tab-content" id="onglet-120">
  
    
       <p>SIDES : R&eacute;seau RIUF-Path par Emilie Perron (U Laval, Qu&eacute;bec), Maxime Battistella (U Paris Diderot), B&eacute;atrice Vergier (U Bordeaux), puis valid&eacute; par plusieurs autres coll&egrave;gues du r&eacute;seau et le comit&eacute; &eacute;ditorial de la plate-forme.</p>
@@ -2432,15 +2450,15 @@ Object name is medi-96-e7333-g001.jpg" src="https://www.ncbi.nlm.nih.gov/pmc/art
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
- <div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab31')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab32')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab33')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab34')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab35')">Ressources</button>
-</div>
+ <ul class="onglets">
+    <li class="active"><a href="#onglet-31">Histologie</a></li>
+    <li><a href="#onglet-32">Examens complémentaires</a></li>
+    <li><a href="#onglet-33">Clinique</a></li>
+    <li><a href="#onglet-34">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-35">Ressources</a></li>
+  </ul>
 
-  <div class="tabcontent" id="tab31">
+  <div class="tab-content active" id="onglet-31">
     <p>Présentation très variable <br/><br/>
 
 Peu d’atteinte de l’épiderme, vacuolisation de la couche basale avec quelques rares kératinocytes apoptotiques.<br/><br/>
@@ -2459,13 +2477,13 @@ Atteinte possible de l’hypoderme avec calcifications.
     </p>
   </div>
 
-  <div class="tabcontent" id="tab32">
+  <div class="tab-content" id="onglet-32">
     <p><strong>C5-9</strong> positif en immunofluorescence</p>
 <p><strong>IgG, IgA</strong> et IgM n&eacute;gatifs en immunofluorescence</p>
 <p><strong>Bleu alcian</strong> utilisable pour mettre en valeur la mucine</p>
   </div>
  
-    <div class="tabcontent" id="tab33">
+    <div class="tab-content" id="onglet-33">
    <p>Maladie inflammatoire syst&eacute;mique de cause inconnue. La forme classique comporte une polymyosite et des l&eacute;sions cutan&eacute;es.</p>
 <p>La polymyosite est proximale et sym&eacute;trique et le diagnostic est confirm&eacute; par la biopsie musculaire, le dosage des enzymes musculaires et &agrave; l&rsquo;&eacute;lectromyogramme (&agrave; l&rsquo;exception des dermatomyosites amyopathiques).</p>
 <p>Les l&eacute;sions cutan&eacute;es peuvent pr&eacute;c&eacute;der de plus de deux ans l&rsquo;atteinte musculaire.</p>
@@ -2481,7 +2499,7 @@ Atteinte possible de l’hypoderme avec calcifications.
 Object name is ad-21-435-g002.jpg" title="Click on image to zoom" class="tileshop" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861260/bin/ad-21-435-g002.jpg" width="404" height="306" /></p>
   </div>
   
-    <div class="tabcontent" id="tab34">
+    <div class="tab-content" id="onglet-34">
 <p><span style="font-size: large;">Diagnostics diff&eacute;rentiels clinique :</span></p>
 <p><a class="autolink" title="Lupus &eacute;ryth&eacute;mateux" href="https://sides.uness.fr/elearning/mod/page/view.php?id=204025"></a>Lupus &eacute;ryth&eacute;mateyx</p>
 <p>Scl&eacute;rodermie</p>
@@ -2489,7 +2507,7 @@ Object name is ad-21-435-g002.jpg" title="Click on image to zoom" class="tilesho
 <p>Trichinose</p>
 <p>Toxoplasmose</p>  </div>
   
-    <div class="tabcontent" id="tab35">
+    <div class="tab-content" id="onglet-35">
     <p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=02272%2B&link=1&cx=295&cy=101&n=3&m=0&q=65&f=0&r=0&language=en" target="_blank" rel="noopener">ici</a>. <br/><br/>
       
       Papule de Gottron sur lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=14181%2B&link=1&cx=305&cy=99&n=32&m=6&q=65&f=2&r=0&language=en" target="_blank" rel="noopener">ici</a>.</p>
@@ -2531,15 +2549,16 @@ Object name is ad-21-435-g002.jpg" title="Click on image to zoom" class="tilesho
   <p>Lichen scléroatrophique : Maladie inflammatoire chronique d’étiologie inconnue. Le lichen scléreux (LS) est une dermatose inflammatoire chronique atteignant avec prédilection la région ano-génitale. 
 Survenant chez des sujets génétiquement prédisposés, la maladie est considérée, chez la femme, comme auto-immune en raison de la mise en évidence d’auto-anticorps tissulaires spécifiques et de son association significative à des pathologies auto-immunes.</p>
   <p>Morphée : aussi appel&eacute; scl&eacute;rodermie cutan&eacute;e : rare pathologie auto-miiune fibrosante divis&eacute;e selon sa pr&eacute;sentation clinique</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab156')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab157')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab158')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab159')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab160')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-156">Histologie</a></li>
+    <li><a href="#onglet-157">Examens complémentaires</a></li>
+    <li><a href="#onglet-158">Clinique</a></li>
+    <li><a href="#onglet-159">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-160">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab156">
+  <div class="tab-content active" id="onglet-156">
     <div class="block_body">
 
 
@@ -2560,7 +2579,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
 
   
-  <div class="tabcontent" id="tab157">
+  <div class="tab-content" id="onglet-157">
 <div class="block_body">
   
   <p>/</p>
@@ -2568,7 +2587,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
   </div>
  </div>
 
-    <div class="tabcontent" id="tab158">
+    <div class="tab-content" id="onglet-158">
       
 <h1>Lichen scl&eacute;reux et atrophique</h1>
 <p></p>
@@ -2594,7 +2613,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
       
   </div>
   
-    <div class="tabcontent" id="tab159">
+    <div class="tab-content" id="onglet-159">
       
 
 <p>Papulose &agrave; cellules claires</p>
@@ -2605,7 +2624,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
   </div>
   
-    <div class="tabcontent" id="tab160">
+    <div class="tab-content" id="onglet-160">
  
    
  <p> SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. </p>
@@ -2649,14 +2668,15 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Erythema dyschromicum perstans</h2> </p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab91')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab92')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab93')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab94')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab95')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab91">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-91">Histologie</a></li>
+    <li><a href="#onglet-92">Examens complémentaires</a></li>
+    <li><a href="#onglet-93">Clinique</a></li>
+    <li><a href="#onglet-94">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-95">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-91">
     <div class="block_body">
 
 <p>Histologiquement, les plans de coupe r&eacute;alis&eacute;s retrouvent une d&eacute;g&eacute;n&eacute;rescence vacuolaire de la couche basale, infiltrat lymphocytaire superficiel; et secondairement, la pr&eacute;sence de m&eacute;lanophages dispers&eacute;s dans le derme sup&eacute;rieur.</p>
@@ -2667,18 +2687,18 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 </div>
 
 
-  <div class="tabcontent" id="tab92">
+  <div class="tab-content" id="onglet-92">
 <div class="block_body">
   <p>/</p>  
   </div>
  </div>
 
-    <div class="tabcontent" id="tab93">
+    <div class="tab-content" id="onglet-93">
  <p>L'&eacute;ryth&egrave;ma dyschromicum perstans est une forme d'hyperpigmentation maculaire dermique acquise caract&eacute;ris&eacute;e par des taches rondes &agrave; ovales sur le visage, le cou et le tronc qui sont de couleur grise. Il s'agit d'une forme d'hyperm&eacute;lanose dermique acquise par hyperm&eacute;laninose post-inflammatoire. L'&eacute;ryth&egrave;ma dyschromicum perstans est &eacute;galement appel&eacute; dermatose cendr&eacute;e (de Ramirez), en raison de sa couleur.</p>
       <p><img loading="lazy" alt="Fig. 1" title="Click on image to zoom" class="tileshop" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322153/bin/gr1.jpg" /></p>
   </div>
   
-    <div class="tabcontent" id="tab94">
+    <div class="tab-content" id="onglet-94">
  <ul>
 <li>Hyperpigmentation cutan&eacute;e acquise dermique maculaire.</li>
 <li>Lichen plan pigment&eacute;.</li>
@@ -2692,7 +2712,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
   </div>
   
-    <div class="tabcontent" id="tab95">
+    <div class="tab-content" id="onglet-95">
  
    
       <p>Leung N, Oliveira M, Selim MA, McKinley-Grant L, Lesesky E. Erythema dyschromicum perstans: A case report and systematic review of histologic presentation and treatment. Int J Womens Dermatol. 27 sept 2018;4(4):216‑22. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322153/">Accessible en ligne ici</a>
@@ -2718,15 +2738,16 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
   
  <p>Les lymphomes T cutan&eacute;s &eacute;pidermotropes correspondent &agrave; des lymphoprolif&eacute;rations malignes, monoclonales, de lymphocytes T de ph&eacute;notype CD4+ dans la grande majorit&eacute; des cas. Les lymphomes T cutan&eacute;s &eacute;pidermotropes sont r&eacute;partis en deux entit&eacute;s&nbsp;: le mycosis fongo&iuml;de et le syndrome de S&eacute;zary, ce dernier correspondant &agrave; la forme leuc&eacute;mique des lymphomes T cutan&eacute;s &eacute;pidermotropes.</p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab186')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab187')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab188')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab189')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab190')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-186">Histologie</a></li>
+    <li><a href="#onglet-187">Examens complémentaires</a></li>
+    <li><a href="#onglet-188">Clinique</a></li>
+    <li><a href="#onglet-189">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-190">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab186">
+  <div class="tab-content active" id="onglet-186">
 <p>Les lymphocytes du MF sont des cellules T matures qui ont transit&eacute; par le ganglion lymphatique et ont subi une stimulation antig&eacute;nique. Elles ont une tendance particuli&egrave;re &agrave; coloniser l'&eacute;piderme (<strong>&eacute;pidermotropisme</strong>), bien que cela soit plus &eacute;vident dans les formes en plaque et en patch que dans la maladie &agrave; un stade de tumeur o&ugrave; l'&eacute;pidermotropisme peut &ecirc;tre compl&egrave;tement perdu. Dans une moindre mesure dans les l&eacute;sions pr&eacute;coces, et de mani&egrave;re plus &eacute;vidente dans les stades ult&eacute;rieurs, l'infiltrat contient des grandes cellules avec des noyaux irr&eacute;guliers, contourn&eacute;s ou c&eacute;r&eacute;briformes, connues sous le nom de <em>cellules de S&eacute;zary</em>. L'appr&eacute;ciation du caract&egrave;re "atypique" doit &ecirc;tre temp&eacute;r&eacute;e avec prudence car des cellules identiques (bien que en petit nombre) sont parfois observ&eacute;es dans l'infiltrat de certaines dermatoses. Leur pr&eacute;sence doit &eacute;videmment &ecirc;tre consid&eacute;r&eacute;e dans le contexte des caract&eacute;ristiques histologiques accompagnantes et, en particulier, &agrave; la lumi&egrave;re des informations cliniques.</p>
 <p>&nbsp;La pr&eacute;sence de cellules lympho&iuml;des atypiques dans une v&eacute;sicule intra&eacute;pidermique (le microabc&egrave;s de Pautrier) est typique, bien que non diagnostique, de la mycosis fungo&iuml;de. Des caract&eacute;ristiques similaires peuvent &ecirc;tre observ&eacute;es, bien que moins fr&eacute;quemment, dans le syndrome de S&eacute;zary, la leuc&eacute;mie/lymphome T de l'adulte (ATLL), le r&eacute;ticuloid actinique et les pseudolymphomes T induits par des m&eacute;dicaments.</p>
 <p></p>
@@ -2760,7 +2781,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
 
   
-  <div class="tabcontent" id="tab187">
+  <div class="tab-content" id="onglet-187">
 
   
   <p><p><img loading="lazy" src="https://ars.els-cdn.com/content/image/1-s2.0-S0242649815000218-gr1.jpg" alt="https://ars.els-cdn.com/content/image/1-s2.0-S0242649815000218-gr1.jpg" width="693" height="490" /></p>
@@ -2769,7 +2790,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
  </div>
 
-    <div class="tabcontent" id="tab188">
+    <div class="tab-content" id="onglet-188">
       
 <p>Le mycosis fongo&iuml;de peut se pr&eacute;senter sous une forme progressive, &eacute;voluant successivement en une phase initiale de l&eacute;sions ecz&eacute;matiformes non infiltr&eacute;es, puis peuvent appara&icirc;tre des plaques infiltr&eacute;es, enfin le stade des tumeurs, ou encore l&rsquo;extension des l&eacute;sions peut aboutir &agrave; un &eacute;tat &eacute;rythrodermie. L&rsquo;&eacute;volutivit&eacute; est tr&egrave;s variable d&rsquo;un cas &agrave; l&rsquo;autre, et certaines formes se r&eacute;v&egrave;lent d&rsquo;embl&eacute;e par des tumeurs.</p>
 <p><img loading="lazy" src="https://img.medscapestatic.com/fullsize/migrated/563/164/dn563164.fig1.gif" alt="https://img.medscapestatic.com/fullsize/migrated/563/164/dn563164.fig1.gif" /></p>
@@ -2779,7 +2800,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
       
   </div>
   
-    <div class="tabcontent" id="tab189">
+    <div class="tab-content" id="onglet-189">
       
 
 <p><img loading="lazy" src="https://raw.githubusercontent.com/mathias2a/mathias2a.github.io/main/tableau%20MF%20diag%20diff.jpg" alt="https://raw.githubusercontent.com/mathias2a/mathias2a.github.io/main/tableau%20MF%20diag%20diff.jpg" class="shrinkToFit" width="744" height="618" /></p>
@@ -2787,7 +2808,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
   </div>
   
-    <div class="tabcontent" id="tab190">
+    <div class="tab-content" id="onglet-190">
  
      <p>GFELC : Groupe Fran&ccedil;ais d&rsquo;Etude des Lymphomes Cutan&eacute;s, r&eacute;seau francophone compos&eacute; de 31 centres en France dont 6 centres experts de r&eacute;f&eacute;rence, 11 centres experts associ&eacute;s et 14 centres correspondants en France, ainsi que de 6 centres correspondants belges et suisses. Algorithmes disponibles sur leur <a href="https://www.gfelc.org/algorithmes-anatomo-pathologiques/" target="_blank" rel="noopener">site internet.</a></p>
 <p>Calonje E, Brenn T, Lazar AJ, MacKee PH, Billings SD, &eacute;diteurs. McKee&rsquo;s pathology of the skin: with clinical correlations. Fifth edition. Philadelphia, PA: Elsevier; 2020.</p>
@@ -2875,15 +2896,16 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
 <p>Les localisations les plus fréquentes du lichen plan sont la muqueuse buccale et la peau. Les muqueuses génitales et plus rarement les muqueuses oculaires et oesophagiennes, ainsi que les ongles et le cuir chevelu peuvent être atteints.</p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab161')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab162')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab163')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab164')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab165')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-161">Histologie</a></li>
+    <li><a href="#onglet-162">Examens complémentaires</a></li>
+    <li><a href="#onglet-163">Clinique</a></li>
+    <li><a href="#onglet-164">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-165">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab161">
+  <div class="tab-content active" id="onglet-161">
     <div class="block_body">
 
 
@@ -2904,7 +2926,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
 
   
-  <div class="tabcontent" id="tab162">
+  <div class="tab-content" id="onglet-162">
 <div class="block_body">
   
   <p>Corps de Civatte réhaussés à l'IF et mieux visualisés au PAS</p>
@@ -2912,7 +2934,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
   </div>
  </div>
 
-    <div class="tabcontent" id="tab163">
+    <div class="tab-content" id="onglet-163">
       
 <p>Eruption prurigineuse de papules violac&eacute;es, brillantes, polygonales, de 1 &agrave; 3 mm, &agrave; surface plane recouvertes de fines stries blanch&acirc;tres (stries de Wickman). Les papules peuvent confluer en plaques. Il y a fr&eacute;quemment un ph&eacute;nom&egrave;ne de K&ouml;bner &agrave; l&rsquo;origine de l&eacute;sions de disposition lin&eacute;aire secondaire au prurit.</p>
 <p>Cette &eacute;ruption se localise pr&eacute;f&eacute;rentiellement sur la face ant&eacute;rieure des poignets et des avant-bras, les membres inf&eacute;rieurs et la r&eacute;gion lombaire. Les l&eacute;sions r&eacute;gressent en laissant fr&eacute;quemment une hyperpigmentation durable, en particulier sur les peaux mates.</p>
@@ -2923,7 +2945,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
       
   </div>
   
-    <div class="tabcontent" id="tab164">
+    <div class="tab-content" id="onglet-164">
       
 
 <p>Diagnostic diff&eacute;rentiel&nbsp;clinique :</p>
@@ -2933,7 +2955,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
   </div>
   
-    <div class="tabcontent" id="tab165">
+    <div class="tab-content" id="onglet-165">
  
    
  <p> SIDES : Réseau RIUF-Path par Emilie Perron (U Laval, Québec), Maxime Battistella (U Paris Diderot), Béatrice Vergier (U Bordeaux), puis validé par plusieurs autres collègues du réseau et le comité éditorial de la plate-forme. </p>
@@ -3025,15 +3047,16 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
   
   
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab166')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab167')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab168')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab169')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab170')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-166">Histologie</a></li>
+    <li><a href="#onglet-167">Examens complémentaires</a></li>
+    <li><a href="#onglet-168">Clinique</a></li>
+    <li><a href="#onglet-169">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-170">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab166">
+  <div class="tab-content active" id="onglet-166">
     <div class="block_body">
 
 
@@ -3050,7 +3073,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
 
   
-  <div class="tabcontent" id="tab167">
+  <div class="tab-content" id="onglet-167">
 <div class="block_body">
   
   <p>/</p>
@@ -3058,7 +3081,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
   </div>
  </div>
 
-    <div class="tabcontent" id="tab168">
+    <div class="tab-content" id="onglet-168">
       
 <p>&eacute;ruption lin&eacute;aire acquise d&rsquo;apparition rapide et transitoire, qui suit les lignes de Blashko. Elle survient typiquement chez l&rsquo;enfant entre 3 et 10 ans avec l&eacute;g&egrave;re pr&eacute;dominance de fille. L&rsquo;&eacute;ruption apparait brutalement, avec une extension en 2 &agrave; 3 semaines et se manifeste par des petites papules ros&eacute;es ou brunes p&acirc;les de 1 &agrave; 2 mm, plus ou moins squameuses. Il n&rsquo;y a pas de stries de Wickham. Le prurit est rare, plut&ocirc;t d&eacute;crit chez l&rsquo;adulte. Il a &eacute;galement &eacute;t&eacute; d&eacute;crit des aspects ressemblant &agrave; un ecz&eacute;ma v&eacute;siculeux ou un psoriasis.</p>
 <p>La topographie est caract&eacute;ristique, souvent unilat&eacute;rale, selon les lignes de Blaschko. Chez l&rsquo;enfant il s&rsquo;agit le plus souvent d&rsquo;une bande unique monom&eacute;lique. Des atteintes bilat&eacute;rales ou multifocales sont rares mais ont &eacute;t&eacute; d&eacute;crites. Chez l&rsquo;adulte les atteintes multilin&eacute;aires semblent plus habituelles. Les membres sont le plus fr&eacute;quemment touch&eacute;s, mais le tronc et la face peuvent aussi &ecirc;tre atteints de fa&ccedil;on exclusive.&nbsp;</p>
@@ -3069,7 +3092,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
       
   </div>
   
-    <div class="tabcontent" id="tab169">
+    <div class="tab-content" id="onglet-169">
       
 
 <ul>
@@ -3081,7 +3104,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 
   </div>
   
-    <div class="tabcontent" id="tab170">
+    <div class="tab-content" id="onglet-170">
  
    
 <p><a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=02408%2B&amp;link=1&amp;cx=428&amp;cy=450&amp;n=32&amp;m=3&amp;q=65&amp;f=0&amp;r=0&amp;language=en" target="_blank" rel="noopener">Lame virtuelle ici</a></p>
@@ -3104,14 +3127,15 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 <br/><br/> Sous cet acronyme, on regroupe le <strong><span style="text-decoration: underline;">purpura annulaire de Majocchi</span></strong>, la <span style="text-decoration: underline;"><strong>dermatite lich&eacute;no&iuml;de purpurique de Gougerot et Blum</strong></span>, la d<span style="text-decoration: underline;"><strong>ermatite pigmentaire de Schamberg</strong></span>, le <span style="text-decoration: underline;"><strong>lichen aureus</strong></span> et l&rsquo;<span style="text-decoration: underline;"><strong><em>eczematide-like</em> <em>purpura</em></strong></span>. Certains auteurs ont propos&eacute; de regrouper ces entit&eacute;s sous le terme de <strong>purpura simplex</strong></p>
 <p></p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab36')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab37')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab38')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab39')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab40')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab36">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-36">Histologie</a></li>
+    <li><a href="#onglet-37">Examens complémentaires</a></li>
+    <li><a href="#onglet-38">Clinique</a></li>
+    <li><a href="#onglet-39">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-40">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-36">
     <div class="block_body">
 <ul>
 <li>Commun &agrave; l'ensemble des capillarites :
@@ -3174,7 +3198,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 </div>
   </div>
 
-  <div class="tabcontent" id="tab37">
+  <div class="tab-content" id="onglet-37">
 <ul>
 <li>L'immunofluorescence directe retrouve des d&eacute;p&ocirc;ts de fibrinogen, IgM ouC3au niveau des vaisseaux du derme superficiel</li>
 <li>La coloration de Perls, et le Fontana marquent les d&eacute;pots h&eacute;mosid&eacute;riniques</li>
@@ -3182,7 +3206,7 @@ Object name is cde0002-0055-f03.jpg" title="Click on image to zoom" class="tiles
 </ul>
   </div>
  
-    <div class="tabcontent" id="tab38">
+    <div class="tab-content" id="onglet-38">
    <p>Les capillarites sont un groupe d&rsquo;affections dermatologiques caract&eacute;ris&eacute;es par des l&eacute;sions purpuriques des membres inf&eacute;rieurs, de taille variable, parfois extensives, le plus souvent l&eacute;g&egrave;rement prurigineuses ou indolores.</p>
 <p>La physiopathologie de ces affections n&rsquo;est pas claire ; certaines sont li&eacute;es &agrave; la prise de m&eacute;dicaments (vitamines du groupe B, diur&eacute;tiques, anti-inflammatoires non st&eacute;ro&iuml;diens), qu&rsquo;il convient d&rsquo;arr&ecirc;ter s&rsquo;ils sont retrouv&eacute;s &agrave; l&rsquo;interrogatoire.</p>
 <p></p>
@@ -3236,7 +3260,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 </ul>
   </div>
   
-    <div class="tabcontent" id="tab39">
+    <div class="tab-content" id="onglet-39">
 <ul>
 <li> Dermite de stase :
 <ul>
@@ -3266,7 +3290,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 </li>
 </ul></div>
   
-    <div class="tabcontent" id="tab40">
+    <div class="tab-content" id="onglet-40">
     <p><a href="https://www.therapeutique-dermatologique.org/spip.php?article1043">Capillarites - Th&eacute;rapeutique Dermatologique - e-portail</a></p>
 <p><a href="https://www.pathologyoutlines.com/topic/skinnontumorpigmentedpurpuricdermatosis.html">Pathology outlines</a></p>
 <p>Capillarite Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=00284%2B&link=1&cx=313&cy=295&n=10&m=0&q=65&f=0&r=0&language=en" target="_blank" rel="noopener">ici</a></p>
@@ -3290,15 +3314,16 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Kératose lichénoïde solitaire</h2> </p>
   
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab146')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab147')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab148')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab149')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab150')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-146">Histologie</a></li>
+    <li><a href="#onglet-147">Examens complémentaires</a></li>
+    <li><a href="#onglet-148">Clinique</a></li>
+    <li><a href="#onglet-149">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-150">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab146">
+  <div class="tab-content active" id="onglet-146">
     <div class="block_body">
 
 <p>La d&eacute;finition <strong>histologique</strong> est d&eacute;finie comme une l&eacute;sion b&eacute;nigne avec une &eacute;pith&eacute;lium &eacute;paissi ou atrophi&eacute; ou pigment&eacute; montrant des degr&eacute;s variables d'<strong>inflammation chronique</strong> comprenant des lymphocytes, des plasmocytes et/ou des &eacute;osinophiles le long de l'&eacute;pith&eacute;lium ou en exocytose.</p>
@@ -3315,7 +3340,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 
 
   
-  <div class="tabcontent" id="tab147">
+  <div class="tab-content" id="onglet-147">
 <div class="block_body">
   
   <p> / </p> 
@@ -3323,7 +3348,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
   </div>
  </div>
 
-    <div class="tabcontent" id="tab148">
+    <div class="tab-content" id="onglet-148">
       
 <p>Le k&eacute;ratose lich&eacute;no&iuml;de b&eacute;nigne, &eacute;galement connue sous le nom de k&eacute;ratose lich&eacute;no&iuml;de "lichen plan-like", et de plaque lich&eacute;no&iuml;de involutive, a &eacute;t&eacute; d&eacute;crite pour la premi&egrave;re fois en 1966 comme une forme solitaire de lichen plan, puis la m&ecirc;me ann&eacute;e par Ackerman comme une k&eacute;ratose lich&eacute;no&iuml;de semblable au lichen plan, en distinction avec le lichen plan.</p>
 <p>C'est une l&eacute;sion courante qui survient principalement sur le tronc et les membres sup&eacute;rieurs d'adultes entre la cinqui&egrave;me et la septi&egrave;me d&eacute;cennie. La pr&eacute;sentation consiste en une papule ou une plaque indur&eacute;e non prurigineuse ou l&eacute;g&egrave;rement prurigineuse et solitaire, mesurant de 5 mm &agrave; 20 mm de diam&egrave;tre, qui &eacute;volue rapidement. La surface est d&eacute;crite comme lisse ou verruqueuse. La couleur a &eacute;t&eacute; rapport&eacute;e comme brun&acirc;tre, eryth&eacute;mateuse ou violac&eacute;e. Les caract&eacute;ristiques cliniques incitent souvent &agrave; consid&eacute;rer un carcinome basocellulaire ou &eacute;pidermo&iuml;de.</p>
@@ -3331,7 +3356,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
       
   </div>
   
-    <div class="tabcontent" id="tab149">
+    <div class="tab-content" id="onglet-149">
       
 
       <ul>
@@ -3343,7 +3368,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 
   </div>
   
-    <div class="tabcontent" id="tab150">
+    <div class="tab-content" id="onglet-150">
  
    
 <p>Morgan MB, Stevens GL, Switlyk S. Benign Lichenoid Keratosis: A Clinical and Pathologic Reappraisal of 1040 Cases. The American Journal of Dermatopathology. oct 2005;27(5):387.</p>
@@ -3399,16 +3424,17 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Le lichen nitidus</h2> </p>
   
   
-  <div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab171')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab172')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab173')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab174')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab175')">Ressources</button>
-</div>
+  
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-171">Histologie</a></li>
+    <li><a href="#onglet-172">Examens complémentaires</a></li>
+    <li><a href="#onglet-173">Clinique</a></li>
+    <li><a href="#onglet-174">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-175">Ressources</a></li>
+  </ul>
 
   
-  <div class="tabcontent" id="tab171">
+  <div class="tab-content active" id="onglet-171">
     <div class="block_body">
 
 <p>L&rsquo;aspect histologique typique est celui d&rsquo;un infiltrat localis&eacute; nodulaire au sommet des papilles dermiques, plaqu&eacute; contre l&rsquo;&eacute;piderme, avec allongement des cr&ecirc;tes &eacute;pidermiques enserrant de part et d&rsquo;autre cet infiltrat, r&eacute;alisant l&rsquo;aspect pathognomonique de &laquo; griffes tenant une balle &raquo;. L&rsquo;infiltrat est compos&eacute; de lymphocytes et d&rsquo;histiocytes, avec parfois des cellules g&eacute;antes, pouvant prendre un aspect tuberculo&iuml;de. Il n&rsquo;y a pas de n&eacute;crose cas&eacute;euse. L&rsquo;&eacute;piderme est atrophique, et il existe en topographie basale des corps de n&eacute;crose ; la couche granuleuse est diminu&eacute;e ou absente, et l&rsquo;on retrouve une parak&eacute;ratose.</p>
@@ -3425,7 +3451,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 
 
   
-  <div class="tabcontent" id="tab172">
+  <div class="tab-content" id="onglet-172">
 <div class="block_body">
   
   <p><ul>
@@ -3436,7 +3462,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
   </div>
  </div>
 
-    <div class="tabcontent" id="tab173">
+    <div class="tab-content" id="onglet-173">
       
 <p>Affecte pr&eacute;f&eacute;rentiellement les enfants, les adolescents et l&rsquo;adulte jeune, sans distinction de sexe ni d&rsquo;origine ethnique. L&rsquo;&acirc;ge m&eacute;dian de survenue est de 7 ans pour les gar&ccedil;ons, 13 ans pour les filles. Cependant des cas ont &eacute;t&eacute; rapport&eacute;s jusqu&rsquo;&agrave; 80 ans.</p>
 <p>Les l&eacute;sions sont des papules en t&ecirc;tes d&rsquo;&eacute;pingle, de couleur chair, brillantes (nitidus en latin signifie brillant, qui brille), en d&ocirc;me ou planes, de 1 &agrave; 2 mm de diam&egrave;tre, parfois recouvertes d&rsquo;une fine squame. Elles sont monomorphes et souvent regroup&eacute;es en une dizaine d&rsquo;&eacute;l&eacute;ments, en plusieurs petits placards &eacute;pars sur le t&eacute;gument. Elles sont habituellement asymptomatiques, mais un prurit est possible. Elles si&egrave;gent habituellement sur le tronc, la face d&rsquo;extension des membres et les organes g&eacute;nitaux et respectent les muqueuses. Un ph&eacute;nom&egrave;ne de Koebner est parfois observ&eacute;. Six cas de lichen nitidus purpurique ont &eacute;t&eacute; rapport&eacute;s. Quelques cas d&rsquo;atteinte ungu&eacute;ale, &agrave; type de stries longitudinales et de petites d&eacute;pressions cupuliformes, ont &eacute;t&eacute; publi&eacute;s. Aux paumes et aux plantes, le lichen nitidus peut se pr&eacute;senter comme une k&eacute;ratodermie ponctu&eacute;e, ou mimer une dysidrose.</p>
@@ -3445,7 +3471,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
       
   </div>
   
-    <div class="tabcontent" id="tab174">
+    <div class="tab-content" id="onglet-174">
       
 
 <ul>
@@ -3456,7 +3482,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 
   </div>
   
-    <div class="tabcontent" id="tab175">
+    <div class="tab-content" id="onglet-175">
  
    
 <p>SIDES : R&eacute;seau RIUF-Path par Emilie Perron (U Laval, Qu&eacute;bec), Maxime Battistella (U Paris Diderot), B&eacute;atrice Vergier (U Bordeaux), puis valid&eacute; par plusieurs autres coll&egrave;gues du r&eacute;seau et le comit&eacute; &eacute;ditorial de la plate-forme.</p>
@@ -3587,15 +3613,15 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab6')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab7')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab8')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab9')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab10')">Ressources</button>
-</div>
+<ul class="onglets">
+    <li class="active"><a href="#onglet-6">Histologie</a></li>
+    <li><a href="#onglet-7">Examens complémentaires</a></li>
+    <li><a href="#onglet-8">Clinique</a></li>
+    <li><a href="#onglet-9">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-10">Ressources</a></li>
+  </ul>
 
-  <div class="tabcontent" id="tab6">
+  <div class="tab-content active" id="onglet-6">
     <p>  <h3><strong>HISTOLOGIE</strong></h3>
 			<p><p><span class="term tooltipstered" data-term-id="370">Filaments myc&eacute;liens dans la partie superficielle de la couche corn&eacute;e, PAS positifs. Modifications &agrave; l'HE inconstantes : parak&eacute;ratose focale, neutrophiles en exocytose dans la couche corn&eacute;e.</span></p>
 <div class="imageModal__image"><img loading="lazy" src="https://www.pathologyoutlines.com/wick/breast/candidiasisskinmicro.jpg" width="308" height="256" /></div>
@@ -3603,11 +3629,11 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 <p></p></p></p>
   </div>
 
-  <div class="tabcontent" id="tab7">
+  <div class="tab-content" id="onglet-7">
     <p><p><p><span class="term tooltipstered" data-term-id="370"><span><em>Coloration utiles : </em><strong>Grocott-Gomori</strong> (<em>GMS</em>)</span> et <strong>PAS</strong>.<br /></span></p></p></p>
   </div>
  
-    <div class="tabcontent" id="tab8">
+    <div class="tab-content" id="onglet-8">
     <p><h3><strong>CLINIQUE</strong></h3>
 			<p><div class="obsahoddilu">
 <div class="textoddilu">
@@ -3622,7 +3648,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 </div></p></p>
   </div>
   
-    <div class="tabcontent" id="tab9">
+    <div class="tab-content" id="onglet-9">
     <p><h3><strong>DIAGNOSTICS DIFFERENTIELS</strong></h3>
 	  <p><ul>
 <li>Vaginose bacterienne</li>
@@ -3637,7 +3663,7 @@ Object name is ad-27-404-g002.jpg" title="Click on image to zoom" class="tilesho
 </ul></p></p>
   </div>
   
-    <div class="tabcontent" id="tab10">
+    <div class="tab-content" id="onglet-10">
     <p><h3><strong>RESSOURCES</strong></h3>
 	  <p><p>
 Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=01216+" target="_blank" rel="noopener">ici</a>.
@@ -3661,14 +3687,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 <ul data-role='listview' data-inset='true' >
 </ul>
 </div><!-- /content -->
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab41')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab42')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab43')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab44')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab45')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab41">
+	  <ul class="onglets">
+    <li class="active"><a href="#onglet-41">Histologie</a></li>
+    <li><a href="#onglet-42">Examens complémentaires</a></li>
+    <li><a href="#onglet-43">Clinique</a></li>
+    <li><a href="#onglet-44">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-45">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-41">
     <div class="block_body">
 <p>Dermatite spongiotique aigue / subaigue ou chronique :</p>
 <ul>
@@ -3680,11 +3707,11 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
   </div>
 
-  <div class="tabcontent" id="tab42">
+  <div class="tab-content" id="onglet-42">
 /
   </div>
  
-    <div class="tabcontent" id="tab43">
+    <div class="tab-content" id="onglet-43">
    <div class="block_body">La dermite s&eacute;borrh&eacute;ique est caract&eacute;ris&eacute;e par des plaques &eacute;ryth&eacute;mateuses non infiltr&eacute;es surmont&eacute;es de squames grasses et jaun&acirc;tres.</div>
 <div class="block_body">La topographie est tr&egrave;s &eacute;vocatrice, avec des l&eacute;sions atteignant les zones s&eacute;borrh&eacute;iques, plus particuli&egrave;rement le cuir chevelu avec un &eacute;tat desquamatif diffus, les sillons nasog&eacute;niens, les ailes du nez, les sourcils, les paupi&egrave;res, la r&eacute;gion r&eacute;troauriculaire et le conduit auditif externe. Les l&eacute;sions peuvent &eacute;galement s&rsquo;&eacute;tendre au tronc, plus pr&eacute;cis&eacute;ment au niveau intermammaire, ainsi qu&rsquo;au niveau interscapulaire, et plus rarement au niveau des r&eacute;gions g&eacute;nitales et des plis.</div>
 <div class="block_body">Le prurit est inconstant. Les l&eacute;sions sont fluctuantes, et de nombreux sujets atteints de DS insistent sur la variabilit&eacute; des signes et l&rsquo;influence sur les pouss&eacute;es du stress, de la fatigue, du surmenage, des probl&egrave;mes affectifs, et constatent aussi l&rsquo;effet favorable du soleil et des vacances.</div>
@@ -3692,12 +3719,12 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 <div class="block_body"><img loading="lazy" src="https://www.revmed.ch/var/site/storage/images/4/7/3/3/4163374-1-fre-CH/RMS_idPAS_D_ISBN_pu2011-13s_sa05_art05_img002_i1200.jpg" alt="https://www.revmed.ch/var/site/storage/images/4/7/3/3/4163374-1-fre-CH/RMS_idPAS_D_ISBN_pu2011-13s_sa05_art05_img002_i1200.jpg" width="336" height="303" /></div>
   </div>
   
-    <div class="tabcontent" id="tab44">
+    <div class="tab-content" id="onglet-44">
 <p><img loading="lazy" src="https://www.revmed.ch/var/site/storage/images/6/8/3/3/4163386-1-fre-CH/RMS_idPAS_D_ISBN_pu2011-13s_sa05_art05_img004_i1200.jpg" alt="https://www.revmed.ch/var/site/storage/images/6/8/3/3/4163386-1-fre-CH/RMS_idPAS_D_ISBN_pu2011-13s_sa05_art05_img004_i1200.jpg" class="shrinkToFit" width="687" height="506" /></p>
       
   </div>
   
-    <div class="tabcontent" id="tab45">
+    <div class="tab-content" id="onglet-45">
     <p><a href="https://www.revmed.ch/revue-medicale-suisse/2011/revue-medicale-suisse-289/dermite-seborrheique-manifestations-cliniques-et-prise-en-charge">Menzinger S. Revue Médicale Suisse : Dermite séborrhéique : manifestations cliniques et prise en charge. Revue Médicale Suisse. 2011;7(289):752‑8. </a></p>
 
 <p>Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/index.html?idx=04050%2B&link=1&cx=450&cy=196&n=32&m=3&q=65&f=0&r=0&language=en" target="_blank" rel="noopener">ici</a></p>
@@ -3752,24 +3779,25 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </ul>
 </div><!-- /content -->
  <p style="font-family: 'San Francisco', Arial, sans-serif;"> La dermatite d'autosensitisation (autoeczematisation ou "Disseminated secondary eczema") est une dermatite aigue g&eacute;n&eacute;ralis&eacute;e qui se d&eacute;veloppe en r&eacute;ponse &agrave; une pathologie inflammatoire localis&eacute;e cutan&eacute;e.</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab46')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab47')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab48')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab49')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab50')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab46">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-46">Histologie</a></li>
+    <li><a href="#onglet-47">Examens complémentaires</a></li>
+    <li><a href="#onglet-48">Clinique</a></li>
+    <li><a href="#onglet-49">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-50">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-46">
     <div class="block_body">
 <p>Les pr&eacute;l&egrave;vements biopsiques retrouvent un pattern r&eacute;actionnel peu sp&eacute;cifique : g&eacute;n&eacute;ralement, il s'agit d'une dermatite spongiotique avec cellules mononucl&eacute;&eacute;es dans des v&eacute;sicules. Un &oelig;d&egrave;me interstitiel et un infiltrat p&eacute;rivasculaire lymphohistiocytaire sont &eacute;galement pr&eacute;sents.</p>
 </div>
   </div>
 
-  <div class="tabcontent" id="tab47">
+  <div class="tab-content" id="onglet-47">
 /
   </div>
  
-    <div class="tabcontent" id="tab48">
+    <div class="tab-content" id="onglet-48">
    <div class="block_body"><p> La dermite d'autosensibilisation se pr&eacute;sente sous forme d'un ecz&eacute;ma g&eacute;n&eacute;ralis&eacute;, aigu et sym&eacute;trique. Il tend &agrave; &ecirc;tre extr&ecirc;mement prurigineux.</p>
 <p>Les avant-bras, les jambes inf&eacute;rieures, les cuisses et le tronc sont couramment touch&eacute;s.<br />L'apparence varie et comprend des v&eacute;sicules, des papules, des plaques cro&ucirc;teuses (ecz&eacute;ma disco&iuml;de), une &eacute;ruption morbilliforme, une dermatite v&eacute;siculaire des mains...<br />Des signes g&eacute;n&eacute;raux peuvent apparaitre : asth&eacute;nie et fi&egrave;vre.</p>
 <p>Certaines r&eacute;actions d'autosensibilisation sont "non eczematiformes", et incluent : le nodosum &eacute;ryth&eacute;mateux, la dermatose neutrophilique f&eacute;brile aigu&euml;, le psoriasis en gouttes et les affections cutan&eacute;es bulleuses.</p> <br/>
@@ -3777,7 +3805,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
      
       </div></div>
   
-    <div class="tabcontent" id="tab49">
+    <div class="tab-content" id="onglet-49">
 <p>Les diagnostics diff&eacute;rentiels incluent d'autres types d'ecz&eacute;ma et certaines &eacute;ruptions v&eacute;siculaires.</p>
 <p>La dermatite de contact irritative est une autre dermatose qui se pr&eacute;sente sous forme d'une &eacute;ruption v&eacute;siculaire g&eacute;n&eacute;ralis&eacute;e due &agrave; une exposition r&eacute;p&eacute;t&eacute;e &agrave; des irritants toxiques. L'&eacute;ruption est &eacute;ryth&eacute;mateuse avec des pustules, des ampoules et des cro&ucirc;tes. Elle se trouve uniquement dans les zones directement expos&eacute;es aux irritants, contrairement &agrave; l'autoecz&eacute;matisation, qui se propage aux zones &eacute;loign&eacute;es du site de la r&eacute;action primaire. La dermatite de contact irritative se pr&eacute;sente avec une sensation de br&ucirc;lure plus importante, alors que l'autoecz&eacute;matisation est plus prurigineuse.</p>
 <p>La dermatite de contact allergique se pr&eacute;sente avec des v&eacute;sicules et des papules &eacute;ryth&eacute;mateuses et parfois des bulles. Il y a un &oelig;d&egrave;me et une formation de cro&ucirc;tes, qui peuvent souvent se propager au-del&agrave; du point de contact &agrave; des stades ult&eacute;rieurs. Comme pour l'autoecz&eacute;matisation, il y a un intense prurit.</p>
@@ -3786,7 +3814,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
       
   </div>
   
-    <div class="tabcontent" id="tab50">
+    <div class="tab-content" id="onglet-50">
     <p><a href="https://www.mdedge.com/dermatology/article/245813/contact-dermatitis/autoeczematization-strange-id-reaction-skin">Bertoli M. Autoeczematization: A Strange Id Reaction of the Skin. Cutis [Internet]. 1 sept 2021 [cité 12 mars 2023];108(3). Disponible sur: https://www.mdedge.com/dermatology/article/245813/contact-dermatitis/autoeczematization-strange-id-reaction-skin</a></p>
       <p><a href="https://www.mdedge.com/dermatology/article/190837/contact-dermatitis/id-reaction-associated-red-tattoo-ink">Price A, Tavazoie M, Meehan SA, Leger M. Id Reaction Associated With Red Tattoo Ink</a></p>       
       </div>
@@ -3806,14 +3834,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Eczéma nummulaire</h2> </p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab96')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab97')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab98')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab99')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab100')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab96">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-96">Histologie</a></li>
+    <li><a href="#onglet-97">Examens complémentaires</a></li>
+    <li><a href="#onglet-98">Clinique</a></li>
+    <li><a href="#onglet-99">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-100">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-96">
     <div class="block_body">
 
 <p>Les r&eacute;sultats de la biopsie refl&egrave;tent l'&eacute;volution de la l&eacute;sion :</p>
@@ -3834,20 +3863,20 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
 
 
-  <div class="tabcontent" id="tab97">
+  <div class="tab-content" id="onglet-97">
 <div class="block_body">
   <p>/</p>  
   </div>
  </div>
 
-    <div class="tabcontent" id="tab98">
+    <div class="tab-content" id="onglet-98">
  <p><span style="color: black; font-family: Arial,Helvetica;">Ecz&eacute;ma qui atteint surtout la face d'extension des membres de fa&ccedil;on </span><span style="color: black; font-family: Arial,Helvetica;"><u>sym&eacute;trique</u></span><span style="color: black; font-family: Arial,Helvetica;">, formant des plaques v&eacute;siculeuses, suintantes ou bien s&egrave;ches, crouteuses de un &agrave; quelques centim&egrave;tres (nummulaire = pi&egrave;ce de monnaie). </span></p>
 <p><span style="color: black; font-family: Arial,Helvetica;">La </span><span style="color: black; font-family: Arial,Helvetica;"><u>bordure bien limit&eacute;e</u></span><span style="color: black; font-family: Arial,Helvetica;">, le </span><span style="color: black; font-family: Arial,Helvetica;"><u>caract&egrave;re chronique</u></span><span style="color: black; font-family: Arial,Helvetica;"> et r&eacute;cidivant au m&ecirc;me endroit sont caract&eacute;ristiques. </span></p>
 <p><span style="color: black; font-family: Arial,Helvetica;">L'&eacute;tiologie n'est pas &eacute;lucid&eacute;e dans la majorit&eacute; des cas. L'alcoolisme chronique, les traumatismes locaux, l'exposition &agrave; la chaleur sont des facteurs souvent rapport&eacute;s</span><span style="color: black; font-family: Arial,Helvetica;">. <br />Localis&eacute; uniquement au dos des doigts, des mains ou des avant-bras, l'ecz&eacute;ma nummulaire peut correspondre &agrave; une dermite chronique irritative (p.ex. "dermite des m&eacute;nag&egrave;res" aux d&eacute;tergents) et/ou &agrave; une dermite allergique vraie de contact.<br />La responsabilit&eacute; bact&eacute;rienne est discut&eacute;e, tant en ce qui concerne un ecz&eacute;ma d&ucirc; &agrave; un "microbisme local" sur les plaques (effet d&eacute;cevant des antibiotiques locaux /</span><span style="color: black; font-family: Arial,Helvetica;"><i> per os</i></span><span style="color: black; font-family: Arial,Helvetica;">), qu'&agrave; distance (focal sepsis ORL en particulier).</span></p>
       <p><img loading="lazy" src="http://dermatologie.free.fr/ecznum1c.jpg" alt="http://dermatologie.free.fr/ecznum1c.jpg" /></p>
   </div>
   
-    <div class="tabcontent" id="tab99">
+    <div class="tab-content" id="onglet-99">
 <ul>
 <li>Dermatite de contact allergique : peut se pr&eacute;senter sous forme de l&eacute;sions nummulaires. Les tests &eacute;picutan&eacute;s peuvent aider &agrave; identifier l'allerg&egrave;ne causatif.</li>
 <li>Psoriasis en plaques: se pr&eacute;sente classiquement avec des plaques &eacute;ryth&eacute;mateuses bien d&eacute;limit&eacute;es recouvertes d'une plaque squameuse argent&eacute;e touchant le cuir chevelu, les coudes et les genoux, bien que n'importe quel site puisse &ecirc;tre impliqu&eacute;.</li>
@@ -3867,7 +3896,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 
   </div>
   
-    <div class="tabcontent" id="tab100">
+    <div class="tab-content" id="onglet-100">
  
    
       <p>Robinson CA, Love LW, Farci F. Nummular Dermatitis. In: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing; 2022. Disponible <a href="https://www.ncbi.nlm.nih.gov/books/NBK565878/">ici</a>
@@ -3887,14 +3916,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </ul>
 </div><!-- /content -->
 		 <p style="font-family: 'San Francisco', Arial, sans-serif;"> L’eczéma de contact allergique (ou dermatite de contact ou encore dermatite allergique de contact) est consécutif à l’application par voie directe ou par voie aéroportée d’une substance exogène, se comportant comme un haptène (qui se transforme en allergène complet dans l’épiderme après couplage avec une protéine) et déclenchant une réaction d’hypersensibilité à médiation cellulaire retardée (type IV selon Gell et Coombs). Classiquement, la dermatite allergique de contact survient après 7 à 10 jours lors du premier contact avec l’allergène (phase d’induction) et après 24 à 72 heures lors d’un contact ultérieur (phase de révélation).</p>
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab51')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab52')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab53')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab54')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab55')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab51">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-51">Histologie</a></li>
+    <li><a href="#onglet-52">Examens complémentaires</a></li>
+    <li><a href="#onglet-53">Clinique</a></li>
+    <li><a href="#onglet-54">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-55">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-51">
     <div class="block_body">
 <p>L&rsquo;image histopathologique est celle d&rsquo;une dermatite spongiforme comme dans les autres vari&eacute;t&eacute;s d&rsquo;ecz&eacute;ma.</p>
 <p>Au stade aigu, la l&eacute;sion histologique la plus caract&eacute;ristique est la <strong>spongiose</strong> <strong>&eacute;pidermique</strong>.</p>
@@ -3907,11 +3937,11 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
   </div>
 
-  <div class="tabcontent" id="tab52">
+  <div class="tab-content" id="onglet-52">
 /
   </div>
  
-    <div class="tabcontent" id="tab53">
+    <div class="tab-content" id="onglet-53">
    <div class="block_body">
     <p>L&rsquo;aspect clinique de la dermatite allergique de contact varie consid&eacute;rablement suivant sa topographie et sa chronologie. Au d&eacute;part, il s&rsquo;agit d&rsquo;un ecz&eacute;ma aigu associant &eacute;ryth&egrave;me, papules et v&eacute;sicules. Le prurit est souvent consid&eacute;rable. Les l&eacute;sions sont classiquement mal d&eacute;limit&eacute;es et &eacute;miett&eacute;es en bordure. Sur un fond &eacute;ryth&eacute;mateux, parfois &oelig;d&eacute;mateux, se d&eacute;veloppent de nombreuses v&eacute;sicules (voire des bulles) plus ou moins translucides, laissant sourdre un suintement qui font rapidement place &agrave; des cro&ucirc;telles. A ce stade, une surinfection est possible (imp&eacute;tiginisation).</p>
 <p>La vari&eacute;t&eacute; "s&egrave;che" de la dermatite allergique de contact peut appara&icirc;tre d&rsquo;embl&eacute;e ou faire suite &agrave; un &eacute;pisode aigu. Les l&eacute;sions sont &eacute;ryth&eacute;mateuses, l&eacute;g&egrave;rement squameuses, toujours mal d&eacute;limit&eacute;es et prurigineuses. La desquamation est variable. Il peut exister quelques crevasses. Cet ecz&eacute;ma sec peut lui-m&ecirc;me &eacute;voluer vers un ecz&eacute;ma lich&eacute;nifi&eacute; tr&egrave;s prurigineux et souvent chronique. Le grattage peut jouer un r&ocirc;le quant &agrave; la p&eacute;rennisation des l&eacute;sions. La peau est &eacute;paissie, violac&eacute;e et parcourue de stries k&eacute;ratosiques formant un quadrillage.</p>
@@ -3922,7 +3952,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
      
       </div></div>
   
-    <div class="tabcontent" id="tab54">
+    <div class="tab-content" id="onglet-54">
 <ul>
 <li>Dermatite atopique : Changements spongieux similaires : la pr&eacute;sentation clinique et les tests &eacute;picutan&eacute;s aideront &agrave; diff&eacute;rencier.</li>
 <li>Dermatophytose : Changements spongieux similaires : des modifications de la couche corn&eacute;e peuvent &ecirc;tre un indice d'une infection &agrave; dermatophytes : Neutrophiles dans la couche corn&eacute;e Signe du sandwich (orthok&eacute;ratose entre la parak&eacute;ratose et les filaments). La pr&eacute;sentation clinique, la pr&eacute;paration au KOH ou les colorations fongiques (PAS, GMS) aideront &agrave; diff&eacute;rencier.</li>
@@ -3944,7 +3974,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
       
   </div>
   
-    <div class="tabcontent" id="tab55">
+    <div class="tab-content" id="onglet-55">
       <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vnmPz86UBUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p><a href="https://www.therapeutique-dermatologique.org/spip.php?article1085">Eczéma de contact - Thérapeutique Dermatologique -ebook</a></p>
       <p><a href="https://www.mdedge.com/dermatology/article/190837/contact-dermatitis/id-reaction-associated-red-tattoo-ink">Price A, Tavazoie M, Meehan SA, Leger M. Id Reaction Associated With Red Tattoo Ink</a></p>
@@ -3966,16 +3996,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 <p><h2>dyshidrose</h2></p>
 <ul data-role='listview' data-inset='true' >
 </ul>
-</div><!-- /content -->  
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab56')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab57')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab58')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab59')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab60')">Ressources</button>
-</div>
+</div><!-- /content -->  <ul class="onglets">
+    <li class="active"><a href="#onglet-56">Histologie</a></li>
+    <li><a href="#onglet-57">Examens complémentaires</a></li>
+    <li><a href="#onglet-58">Clinique</a></li>
+    <li><a href="#onglet-59">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-60">Ressources</a></li>
+  </ul>
 
-  <div class="tabcontent" id="tab56">
+  <div class="tab-content active" id="onglet-56">
     <div class="block_body">
 
             <p>Spongiose avec v&eacute;sicules, exocytose lymphocytaire,</p>
@@ -3987,11 +4016,11 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
   </div>
 
-  <div class="tabcontent" id="tab57">
+  <div class="tab-content" id="onglet-57">
 /
   </div>
  
-    <div class="tabcontent" id="tab58">
+    <div class="tab-content" id="onglet-58">
    <div class="block_body">
     <p>En France on parle de dysidrose ou d&rsquo;ecz&eacute;ma dysidrosique.</p>
 <p>La dysidrose simple, ne s&rsquo;accompagne pas de r&eacute;action inflammatoire locale et lorsqu&rsquo;elle s&rsquo;accompagne d&rsquo;un fond &eacute;ryth&eacute;mateux ou &eacute;ryth&eacute;mato-squameux on parle alors d&rsquo;ecz&eacute;ma dysidrosique.</p>
@@ -4001,12 +4030,12 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
      
       </div></div>
   
-    <div class="tabcontent" id="tab59">
+    <div class="tab-content" id="onglet-59">
 <p><img loading="lazy" src="https://www.therapeutique-dermatologique.org/IMG/png/79-Tableau_I.png" alt="https://www.therapeutique-dermatologique.org/IMG/png/79-Tableau_I.png" class="transparent" /></p>
       
   </div>
   
-    <div class="tabcontent" id="tab60">
+    <div class="tab-content" id="onglet-60">
  
     <p><a href="http://dermatologie.free.fr/cas144re.htm">dermatologie.free.fr (photos)</a></p>
       <p><a href="https://www.therapeutique-dermatologique.org/spip.php?article1079#start">Thérapeutique - Dermatologique - ebook portail</a></p>
@@ -4030,15 +4059,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </ul>
 </div><!-- /content -->
 		  <p style="font-family: 'San Francisco', Arial, sans-serif;"> phototoxicité et photo-allergie </p>
- <div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab61')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab62')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab63')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab64')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab65')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-61">Histologie</a></li>
+    <li><a href="#onglet-62">Examens complémentaires</a></li>
+    <li><a href="#onglet-63">Clinique</a></li>
+    <li><a href="#onglet-64">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-65">Ressources</a></li>
+  </ul>
 
-  <div class="tabcontent" id="tab61">
+  <div class="tab-content active" id="onglet-61">
     <div class="block_body">
 
            <p>la photodermatite allergique se caract&eacute;rise par une spongiose, une dysk&eacute;ratose, une infiltration lymphocytaire p&eacute;rivasculaire avec un m&eacute;lange variable de neutrophiles.</p>
@@ -4050,11 +4079,11 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
   </div>
 
-  <div class="tabcontent" id="tab62">
+  <div class="tab-content" id="onglet-62">
 /
   </div>
  
-    <div class="tabcontent" id="tab63">
+    <div class="tab-content" id="onglet-63">
    <div class="block_body">
     <p>L&rsquo;aspect s&eacute;miologique de l&rsquo;&eacute;ruption varie en fonction des m&eacute;canismes physiopathologiques de la photosensibilisation&nbsp;: r&eacute;action phototoxique ou r&eacute;action photo-allergique.</p>
 <p>La <strong><em>photo-allergie</em></strong> est une r&eacute;action photo-immunologique qui fait intervenir, comme dans l&rsquo;ecz&eacute;ma de contact, le syst&egrave;me immunitaire du patient et n&eacute;cessite une phase initiale de photosensibilisation. Elle se manifeste par des l&eacute;sions ecz&eacute;matiformes, licheno&iuml;des ou urticariennes. Au d&eacute;but, les l&eacute;sions sont localis&eacute;es aux zones expos&eacute;es au soleil puis peuvent s&rsquo;&eacute;tendre aux zones prot&eacute;g&eacute;es si l&rsquo;&eacute;viction du photo-allerg&egrave;ne n&rsquo;a pas &eacute;t&eacute; r&eacute;alis&eacute;e. Cette r&eacute;action est plus rarement observ&eacute;e dans la mesure ou elle ne survient que chez certains sujets pr&eacute;dispos&eacute;s.</p>
@@ -4063,12 +4092,12 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
      
       </div></div>
   
-    <div class="tabcontent" id="tab64">
+    <div class="tab-content" id="onglet-64">
 <p>/</p>
       
   </div>
   
-    <div class="tabcontent" id="tab65">
+    <div class="tab-content" id="onglet-65">
  
     <p>Kuznetsov A, Weisenseel P, Flaig M, Ruzicka T, Prinz J. Photoallergic Erythroderma due to Doxycycline Therapy of Erythema Chronicum Migrans. Acta Derm Venerol. 2011;91(6):734‑6. </p>
 
@@ -4145,14 +4174,15 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>hamartome épidermique verruqueux inflammatoire et linéaire (HEVIL)</h2> </p>
  
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab121')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab122')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab123')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab124')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab125')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab121">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-121">Histologie</a></li>
+    <li><a href="#onglet-122">Examens complémentaires</a></li>
+    <li><a href="#onglet-123">Clinique</a></li>
+    <li><a href="#onglet-124">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-125">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-121">
     <div class="block_body">
 
 <p>Dans l'HEVIL, l'histologie retrouve une hyperplasie &eacute;pidermique psoriasiforme avec une alternance d'orthok&eacute;ratose et de parak&eacute;ratose. Les zones orthok&eacute;ratosiques recouvrent un &eacute;piderme d&eacute;prim&eacute; avec une hypergranulose marqu&eacute;e. Les zones de parak&eacute;ratose recouvrent une hypogranulose. Il y a des modifications &eacute;pidermiques &agrave; type de spongiose et de petites v&eacute;sicules. Il y a &eacute;galement une r&eacute;ponse inflammatoire dermique mixte.</p>
@@ -4162,13 +4192,13 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 </div>
 
 
-  <div class="tabcontent" id="tab122">
+  <div class="tab-content" id="onglet-122">
 <div class="block_body">
 <p>/</p> 
   </div>
  </div>
 
-    <div class="tabcontent" id="tab123">
+    <div class="tab-content" id="onglet-123">
       
 <p>L'hamartome &eacute;pidermique verruqueux inflammatoire et lin&eacute;aire (HEVIL) se caract&eacute;rise par un hamartome/naevus verruqueux lin&eacute;aire pr&eacute;sentant des caract&eacute;ristiques inflammatoires distinctes, habituellement d&eacute;crites comme ecz&eacute;matiformes ou psoriasiformes. Certains l'ont compar&eacute; &agrave; la forme lin&eacute;aire rare du psoriasis dans sa pr&eacute;sentation.</p>
 <p>Bien que certains aient sugg&eacute;r&eacute; qu'un syndrome HEVIL existe avec diverses malformations suppl&eacute;mentaires, d'autres ne consid&egrave;rent pas cela comme une association bien d&eacute;finie. Un seul cas d'HEVIL a &eacute;t&eacute; associ&eacute; &agrave; une mutation GJA1, codant pour une prot&eacute;ine de jonction gap <em>(probablement une forme postzygotique et mosa&iuml;que d'&eacute;rythrok&eacute;ratodermie variabilis et progressive qui est normalement autosomique dominante)</em>. Il existe toute une famille de syndromes autosomiques dominants et r&eacute;cessifs avec des mutations dans GJA1 et d'autres g&egrave;nes codant pour des jonctions gap et des connexines.</p>
@@ -4177,7 +4207,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
       
   </div>
   
-    <div class="tabcontent" id="tab124">
+    <div class="tab-content" id="onglet-124">
       
 
 <p>L'hamartome &eacute;pidermique - ressemble &agrave; une k&eacute;ratose s&eacute;borrh&eacute;ique et manque g&eacute;n&eacute;ralement de changements inflammatoires et de caract&eacute;ristiques dans la couche corn&eacute;e observ&eacute;s dans l'HEVIL.</p>
@@ -4186,7 +4216,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 
   </div>
   
-    <div class="tabcontent" id="tab125">
+    <div class="tab-content" id="onglet-125">
  
    
       <p>Tseng HW, Liao JB, Wei YA. Adult-onset inflammatory linear verrucous epidermal nevus: Immunohistochemical studies and review of the literature. Journal of Cutaneous Pathology. 2021;48(1):140‑6. </p>
@@ -4409,15 +4439,16 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
   
   
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab136')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab137')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab138')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab139')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab140')">Ressources</button>
-</div>
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-136">Histologie</a></li>
+    <li><a href="#onglet-137">Examens complémentaires</a></li>
+    <li><a href="#onglet-138">Clinique</a></li>
+    <li><a href="#onglet-139">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-140">Ressources</a></li>
+  </ul>
+
   
-  <div class="tabcontent" id="tab136">
+  <div class="tab-content active" id="onglet-136">
     <div class="block_body">
 
 <p><strong>Histologiquement</strong>, l'examen des l&eacute;sions &agrave; l'&eacute;tape v&eacute;siculaire (stade 1) montre une spongiose &eacute;osinophilique. Des agr&eacute;gats de cellules dysk&eacute;ratosiques sont parfois &eacute;vidents. Une infiltration de cellules inflammatoires chroniques avec une &eacute;osinophilie marqu&eacute;e peut &ecirc;tre pr&eacute;sente dans le derme.</p>
@@ -4431,7 +4462,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
 
 
   
-  <div class="tabcontent" id="tab137">
+  <div class="tab-content" id="onglet-137">
 <div class="block_body">
   
 <p>Des tests moléculaires sont disponibles pour confirmer les cas difficiles.</p> 
@@ -4440,7 +4471,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
   </div>
  </div>
 
-    <div class="tabcontent" id="tab138">
+    <div class="tab-content" id="onglet-138">
       
 <p>Typiquement, la maladie a quatre stades : </p>
 <p>&bull; Le stade 1, comprenant une &eacute;ryth&egrave;me et des v&eacute;sicules lin&eacute;aires sur le tronc et les extr&eacute;mit&eacute;s, apparait &agrave; la naissance ou pendant les deux premi&egrave;res semaines de vie. De mani&egrave;re caract&eacute;ristique, le visage n'est pas affect&eacute;. Les patients pr&eacute;sentent g&eacute;n&eacute;ralement une leucocytose et une &eacute;osinophilie associ&eacute;es. En moyenne, le stade de formation de cloques se r&eacute;sout compl&egrave;tement dans les 4 mois.</p>
@@ -4454,7 +4485,7 @@ Lame virtuelle : <a href="https://atlases.muni.cz/atlases/virtual_microscope/ind
       
   </div>
   
-    <div class="tabcontent" id="tab139">
+    <div class="tab-content" id="onglet-139">
       
 
       <p>Cliniquement, l'incontinence pigmentaire peut être confondue avec l'hypomélanose d'Ito (incontinence pigmentaire achromique), et l'atteinte du système nerveux central dans les deux maladies est similaire. Cependant, cette dernière affection se caractérise par des changements pigmentaires cutanés en l'absence de lésions vésiculaires ou verruqueuses. <br/><br/>
@@ -4464,7 +4495,7 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 
   </div>
   
-    <div class="tabcontent" id="tab140">
+    <div class="tab-content" id="onglet-140">
  
    
       <p>Calonje E, Brenn T, Lazar AJ, MacKee PH, Billings SD, éditeurs. McKee’s pathology of the skin: with clinical correlations. Fifth edition. Philadelphia, PA: Elsevier; 2020. </p>
@@ -4487,15 +4518,16 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 </ul>
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Erythème toxique du nouveau-né</h2> </p>
-  <div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab101')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab102')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab103')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab104')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab105')">Ressources</button>
-</div>
+  
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-101">Histologie</a></li>
+    <li><a href="#onglet-102">Examens complémentaires</a></li>
+    <li><a href="#onglet-103">Clinique</a></li>
+    <li><a href="#onglet-104">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-105">Ressources</a></li>
+  </ul>
 
-  <div class="tabcontent" id="tab101">
+  <div class="tab-content active" id="onglet-101">
     <div class="block_body">
 
 <p>L'examen histologique des <span style="text-decoration: underline;">macules</span> r&eacute;v&egrave;le un &oelig;d&egrave;me dermique l&eacute;ger avec un infiltrat inflammatoire p&eacute;ri-vasculaire clairsem&eacute; compos&eacute; principalement d'&eacute;osinophiles, avec un petit nombre de neutrophiles et de monocytes.</p>
@@ -4508,13 +4540,13 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 </div>
 
 
-  <div class="tabcontent" id="tab102">
+  <div class="tab-content" id="onglet-102">
 <div class="block_body">
   <p>/</p>  
   </div>
  </div>
 
-    <div class="tabcontent" id="tab103">
+    <div class="tab-content" id="onglet-103">
       
 <p>L&rsquo;&eacute;ryth&egrave;me toxique est la dermatose transitoire la plus fr&eacute;quente du nouveau-n&eacute; ; il est observ&eacute; chez plus d&rsquo;un nouveau-n&eacute; sur deux et son &eacute;volution est constamment b&eacute;nigne. Sa pathog&eacute;nie n&rsquo;est toujours pas &eacute;lucid&eacute;e et il pose parfois un probl&egrave;me diagnostique dans des formes atypiques.</p>
 <p>Il survient entre la 24e et la 72e heure de vie mais les formes cong&eacute;nitales ou tardives (jusqu&rsquo;&agrave; la troisi&egrave;me semaine de vie) ne sont pas exceptionnelles. Il se manifeste par un &eacute;ryth&egrave;me plus ou moins diffus qui peut devenir pustuleux, les pustules &eacute;paisses et jaun&acirc;tres &eacute;tant facilement identifiables. L&rsquo;ensemble du rev&ecirc;tement cutan&eacute; peut &ecirc;tre touch&eacute; &agrave; l&rsquo;exception du cuir chevelu, des paumes et des plantes. La r&eacute;gression des l&eacute;sions est rapide, de l&rsquo;ordre de quelques jours avec persistance parfois de cro&ucirc;telles en lieu et place des pustules. Les l&eacute;sions peuvent &ecirc;tre localis&eacute;es ou diffuses &agrave; l&rsquo;ensemble du corps. Aucun traitement n&rsquo;est justifi&eacute; dans ce contexte de dermatose spontan&eacute;ment et rapidement auto-involutive.</p>
@@ -4522,7 +4554,7 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
       
   </div>
   
-    <div class="tabcontent" id="tab104">
+    <div class="tab-content" id="onglet-104">
 <ul>
 <li><b>Incontinence pigmentaire </b>: spongiose &eacute;osinophilique pr&eacute;dominante, non retrouv&eacute;e dans l'eryth&egrave;me toxique du NN&eacute;;</li>
 <li><b>Miliaria rubra </b>: Vesicules en lien avec les canaux sudoraux, pas d'atteinte des follicules cheveux et pr&eacute;dominance de cellules mononucl&eacute;&eacute;es, pas d'&eacute;osinophile.</li>
@@ -4530,7 +4562,7 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 
   </div>
   
-    <div class="tabcontent" id="tab105">
+    <div class="tab-content" id="onglet-105">
  
    
       <p>Plantin P, et la Société française de dermatopédiatrie. [Erythema toxicum neonatorum]. Ann Dermatol Venereol. févr 2010;137(2):150‑2.
@@ -4572,14 +4604,15 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 </div><!-- /content -->
 <p style="font-family: 'San Francisco', Arial, sans-serif;"> <h2>Erythrodermie congénitale ichtyosiforme</h2> </p>
   
-<div class="tabs">
-	<button class="tablink" onclick="openTab(event, 'tab106')" id="defaultOpen">Histologie</button>
-	<button class="tablink" onclick="openTab(event, 'tab107')">Examens complémentaires</button>
-	<button class="tablink" onclick="openTab(event, 'tab108')">Clinique</button>
-  	<button class="tablink" onclick="openTab(event, 'tab109')">Diagnostics différentiels</button>
-  	<button class="tablink" onclick="openTab(event, 'tab110')">Ressources</button>
-</div>
-  <div class="tabcontent" id="tab106">
+  <ul class="onglets">
+    <li class="active"><a href="#onglet-106">Histologie</a></li>
+    <li><a href="#onglet-107">Examens complémentaires</a></li>
+    <li><a href="#onglet-108">Clinique</a></li>
+    <li><a href="#onglet-109">Diagnostics différentiels</a></li>
+    <li><a href="#onglet-110">Ressources</a></li>
+  </ul>
+
+  <div class="tab-content active" id="onglet-106">
     <div class="block_body">
 
 <p>Le diagnostic repose sur l'examen clinique. L'histologie n'est pas sp&eacute;cifique. </p>
@@ -4589,19 +4622,19 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 </div>
 
 
-  <div class="tabcontent" id="tab107">
+  <div class="tab-content" id="onglet-107">
 <div class="block_body">
   <p> L'analyse mol&eacute;culaire est possible, mais n'est pas disponible en pratique clinique. Des tests d'immunohistochimie (anticorps contre TGase 1) ou d&eacute;termination de l'activit&eacute; enzymatique de la TGase 1 sont disponibles dans certains centres.</p>  
   </div>
  </div>
 
-    <div class="tabcontent" id="tab108">
+    <div class="tab-content" id="onglet-108">
       
 <p>D&egrave;s la naissance, les patients sont couverts des fines squames blanche-gris&acirc;tres de diff&eacute;rentes tailles, associ&eacute;es &agrave; une &eacute;rythrodermie. Certains nouveau-n&eacute;s sont envelopp&eacute;s dans une pellicule de collodion doux (tendue, brillante et translucide) et d&eacute;veloppant une &eacute;rythrodermie squameuse apr&egrave;s sa desquamation. Le tableau clinique peut varier avec l'&acirc;ge et le traitement. Un prurit ou une douleur, ainsi qu'une diminution de la sensibilit&eacute; (par les squames) sont typiques. Autres manifestations sont: un ectropion persistant et des complications oculaires associ&eacute;es (k&eacute;ratite, cicatrices de la corn&eacute;e), une k&eacute;ratodermie palmo-plantaire, une alop&eacute;cie, un retard de croissance staturo-pond&eacute;rale, une petite taille, une intol&eacute;rance &agrave; la chaleur, une dystrophie ungu&eacute;ale, et une d&eacute;ficience auditive (due &agrave; l'accumulation des squames dans l'oreille externe) : Vesicules en lien avec les canaux sudoraux, pas d'atteinte des follicules cheveux et pr&eacute;dominance de cellules mononucl&eacute;&eacute;es, pas d'&eacute;osinophile.</p>
       
   </div>
   
-    <div class="tabcontent" id="tab109">
+    <div class="tab-content" id="onglet-109">
       
 <h3>Diagnostic(s) diff&eacute;rentiel(s)</h3>
 <section>
@@ -4610,7 +4643,7 @@ De nombreuses affections sont associées à une spongiose éosinophilique, mais 
 
   </div>
   
-    <div class="tabcontent" id="tab110">
+    <div class="tab-content" id="onglet-110">
  
    
        <p><a href="https://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=FR&amp;Expert=79394">Orpha.net : Erythrodermie cong&eacute;nitale ichtyosiforme s&egrave;che</a></p>
